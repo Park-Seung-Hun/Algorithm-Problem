@@ -1,4 +1,4 @@
-# BaekJoon-Problem
+# BaekJoon Online Judge
 
 Algorithm 문제 풀이
 ---

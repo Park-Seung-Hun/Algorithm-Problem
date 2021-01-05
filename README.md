@@ -1,2 +1,11 @@
 # BaekJoon-Problem
-백준 알고리즘 문제 모음
+
+Algorithm 문제 풀이
+---
+
+
+- language : C++, Python
+
+- [Problem source](https://www.acmicpc.net "BaekJoon Online Judge")
+
+- [내가 해결한 문제](https://www.acmicpc.net/user/wort23)

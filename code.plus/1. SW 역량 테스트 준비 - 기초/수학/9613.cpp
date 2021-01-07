@@ -4,7 +4,7 @@ using namespace std;
 long long gcd(long long a, long long b) {
 	if (b == 0) return a;
 	else return gcd(b, a % b);
-} // ÃÖ´ë °ø¾à¼ö
+} // ìµœëŒ€ ê³µì•½ìˆ˜
 
 int main() {
 	int test_case,n;
@@ -25,5 +25,5 @@ int main() {
 }
 
 /*
-	¹éÁØ 9613¹ø GCD ÇÕ
+	ë°±ì¤€ 9613ë²ˆ GCD í•©
 */

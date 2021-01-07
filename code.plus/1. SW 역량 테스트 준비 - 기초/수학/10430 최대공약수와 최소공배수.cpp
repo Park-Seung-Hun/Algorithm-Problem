@@ -4,12 +4,12 @@ using namespace std;
 int gcd(int a, int b) {
 	if (b == 1) return a;
 	else return gcd(b, a % b);
-}// ÃÖ´ë °ø¾à¼ö
+}// ìµœëŒ€ ê³µì•½ìˆ˜
 
 int lcm(int a, int b) {
 	int g = gcd(a, b);
 	return g * (a / g) * (b / g);
-}// ÃÖ¼Ò °ø¹è¼ö
+}// ìµœì†Œ ê³µë°°ìˆ˜
 
 int main() {
 	int A, B;
@@ -20,5 +20,5 @@ int main() {
 }
 
 /*
-	¹éÁØ 2690¹ø ÃÖ´ë°ø¾à¼ö¿Í ÃÖ¼Ò°ø¹è¼ö
+	ë°±ì¤€ 10430ë²ˆ ìµœëŒ€ê³µì•½ìˆ˜ì™€ ìµœì†Œê³µë°°ìˆ˜
 */ 

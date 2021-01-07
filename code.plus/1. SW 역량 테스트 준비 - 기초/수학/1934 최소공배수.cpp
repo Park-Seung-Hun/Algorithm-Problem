@@ -8,12 +8,12 @@ int gcd(int a, int b) {
 		b = r;
 	}
 	return a;
-}// ÃÖ´ë °ø¾à¼ö
+}// ìµœëŒ€ ê³µì•½ìˆ˜
 
 int lcm(int a, int b) {
 	int g = gcd(a, b);
 	return g * (a / g) * (b / g);
-}// ÃÖ¼Ò °ø¹è¼ö
+}// ìµœì†Œ ê³µë°°ìˆ˜
 
 int main() {
 	int test_case;
@@ -28,5 +28,5 @@ int main() {
 }
 
 /*
-	¹éÁØ 1934¹ø ÃÖ¼Ò°ø¹è¼ö
+	ë°±ì¤€ 1934ë²ˆ ìµœì†Œê³µë°°ìˆ˜
 */

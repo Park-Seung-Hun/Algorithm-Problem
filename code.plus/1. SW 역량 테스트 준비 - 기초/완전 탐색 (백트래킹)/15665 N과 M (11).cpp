@@ -7,7 +7,6 @@ using namespace std;
 int n, m;
 vector<int> num;
 vector<int> save;
-vector<bool> check;
 map<string,int> M;
 
 bool str_check(string s) {
@@ -32,9 +31,9 @@ void back(int cnt) {
 	}
 
 	for (int i = 0; i < n; i++) {
-			save.push_back(num[i]);
-			back(cnt + 1);
-			save.pop_back();
+		save.push_back(num[i]);
+		back(cnt + 1);
+		save.pop_back();
 		
 	}
 }
@@ -46,7 +45,6 @@ int main() {
 	cin >> n >> m;
 	
 	num.resize(n);
-	check.resize(n);
 
 	for (int i = 0; i < n; i++) cin >> num[i];
 	sort(num.begin(), num.end());

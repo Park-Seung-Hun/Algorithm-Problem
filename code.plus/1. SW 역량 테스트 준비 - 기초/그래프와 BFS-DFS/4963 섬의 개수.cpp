@@ -1,106 +1,83 @@
 #include <iostream>
+#include <vector>
 #include <queue>
+#include <algorithm>
 using namespace std;
 
-int dan[50][50];
-int check[50][50];
-int w, h,land,C=0,num=0;
-int check_num;
+vector<vector<int> > map;
+vector<vector<bool> > check;
+int w, h, land;
+
+int movex[4] = { 0,0,1,-1 };
+int movey[4] = { 1,-1,0,0 };
+int movexx[4] = { 1,1,-1,-1 };
+int moveyy[4] = { -1,1,-1,1 };
 
 void bfs(int x, int y) {
 	queue<pair<int, int> > q;
-	C++;
-	check[x][y] = C;
 	q.push(make_pair(x, y));
+	check[x][y] = true;
+
 	while (!q.empty()) {
-		int x = q.front().first;
-		int y = q.front().second;
+		int hx = q.front().first;
+		int hy = q.front().second;
 		q.pop();
 
-		if (dan[x + 1][y] == 1 && check[x + 1][y] == 0 && x < h)
-		{
-			check[x + 1][y] = C;
-			q.push(make_pair(x + 1, y));
-		}//아래
-		if (dan[x - 1][y] == 1 && check[x - 1][y] == 0 && x > 1)
-		{
-			check[x - 1][y] = C;
-			q.push(make_pair(x - 1, y));
-		}//위
-		 if (dan[x][y + 1] == 1 && check[x][y + 1] == 0 && y < w)
-		{
-			check[x][y + 1] = C;
-			q.push(make_pair(x, y + 1));
-		}//오른쪽
-		if (dan[x][y - 1] == 1 && check[x][y - 1] == 0 && y >1)
-		{
-			check[x][y - 1] = C;
-			q.push(make_pair(x, y - 1));
-		}//왼쪽
-		
-		if (dan[x-1][y - 1] == 1 && check[x -1 ][y - 1] == 0 && y > 1 && x > 1)
-		{
-			check[x-1][y - 1] = C;
-			q.push(make_pair(x-1, y - 1));
-		}//왼쪽 위
-		if (dan[x+1][y - 1] == 1 && check[x + 1][y - 1] == 0 && y > 1 && x < h )
-		{
-			check[x + 1][y - 1] = C;
-			q.push(make_pair(x+1, y - 1));
-		}//왼쪽 아래
-		if (dan[x - 1][y + 1] == 1 && check[x - 1][y +1] == 0 && y <w &&x>1)
-		{
-			check[x-1][y + 1] = C;
-			q.push(make_pair(x-1, y + 1));
-		}//오른쪽 위
-		if (dan[x + 1][y + 1] == 1 && check[x + 1][y +1] == 0 && y < w && x < h)
-		{
-			check[x + 1][y + 1] = C;
-			q.push(make_pair(x+1, y +1 ));
-		}// 오른쪽 아래
-	}
-	num++;
-}//넓이 우선 탐색
+		for (int i = 0; i < 4; i++) {
+			int nx = hx + movex[i];
+			int ny = hy + movey[i];
 
+			int nnx = hx + movexx[i];
+			int nny = hy + moveyy[i];
 
-int main() {
-
-	while (1) {
-		cin >> w >> h;
-		if (w == 0 && h == 0) break; // w,h가 0 0 일때 중지
-
-		for (int a = 1;a <= h;a++)
-		{
-			for (int b = 1;b <= w;b++)
-			{
-				cin >> land;
-				dan[a][b] = land;
+			if (nx >= 0 && ny >= 0 && nx < h && ny < w) {
+				if (check[nx][ny] == false && map[nx][ny] == 1) {
+					check[nx][ny] = true;
+					q.push(make_pair(nx, ny));
+				}
 			}
-		}// w h 크기의 사각형 제작
 
-
-		for (int a = 1;a <= h;a++)
-		{
-			for (int b = 1;b <= w;b++) 
-			{
-				if (dan[a][b] == 1 && check[a][b] == 0)
-				{
-					bfs(a, b);
+			if (nnx >= 0 && nny >= 0 && nnx < h && nny < w) {
+				if (check[nnx][nny] == false && map[nnx][nny] == 1) {
+					check[nnx][nny] = true;
+					q.push(make_pair(nnx, nny));
 				}
 			}
 		}
-		for (int a = 1;a <= h;a++)
-		{
-			for (int b = 1;b <= w;b++)
-			{
-				check[a][b] = 0;
+	}
+}
+
+int main() {
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+	
+	while (true) {
+		cin >> w >> h;
+		if (w == 0 && h == 0) break;
+		land = 0;
+
+		map.assign(h, vector<int>(w, 0));
+		check.assign(h, vector<bool>(w, false));
+
+		for (int i = 0; i < h; i++) {
+			for (int j = 0; j < w; j++) {
+				cin >> map[i][j];
 			}
 		}
-		cout <<num<<'\n' ;
-		num = 0; //섬의 개수 0
-		check_num = 0;
-		
-	}
-	
 
+		
+		for (int i = 0; i < h; i++) {
+			for (int j = 0; j < w; j++) {
+				if (map[i][j] == 1 && check[i][j] == false) {
+					land++;
+					bfs(i, j);
+				}
+			}
+		}
+
+		cout << land << '\n';
+	}	
 }
+/*
+	백준 4963번 섬의 개수
+*/

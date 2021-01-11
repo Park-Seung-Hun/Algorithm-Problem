@@ -1,89 +1,86 @@
 #include <iostream>
+#include <vector>
 #include <queue>
-#include <cstdio>
+#include <algorithm>
 using namespace std;
 
-int dan[1001][1001];
-int check[1001][1001];
-int dist[1001][1001];
-int N, M, tomato;
-int dot[4][2] = { {0,-1},{0,1},{-1,0},{1,0} };
-queue<pair<int, int> > q;
+int n, m;
+vector<vector<int> > box;
+vector<vector<bool> > check;
+vector<vector<int> > ans;
+queue<pair<pair<int, int>, int> > q;
 
-void bfs(int x, int y) {
-	cout << "BFS" << '\n';
-
-
-
-	cout << "X : " << x << " Y : " << y << '\n';
-
-}//넓이 우선 탐색
+int movex[4] = { 0,0,-1,1 };
+int movey[4] = { 1,-1,0,0 };
 
 
 int main() {
+	ios::sync_with_stdio(0);
+	cin.tie(0);
 
-	cin >> N >> M;
+	cin >> m >> n;
 
-	for (int a = 1; a <= M; a++)
-	{
-		for (int b = 1; b <= N; b++)
-		{
-			cin >> tomato;
-			dan[a][b] = tomato;
-			if (dan[a][b] == 1)
-			{
-				dist[a][b] = 0;
-				check[a][b] = 1;
-				q.push(make_pair(a, b));
+	box.assign(n, vector<int>(m, 0));
+	check.assign(n, vector<bool>(m, false));
+	ans.assign(n, vector<int>(m, -1));
+
+	bool complete = false;
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < m; j++) {
+			cin >> box[i][j];
+			if(box[i][j]==0) complete = true;
+
+			if (box[i][j] == 1) {
+
+				check[i][j] = true;
+				ans[i][j] = 0;
+				q.push(make_pair(make_pair(i, j), 0));
 			}
-				
 		}
-	}// N x M크기의 사각형 제작
-
-	// 1 익은 토마토 , 0 안익은 토마토 , -1 토마토 없음
+	}
 
 	while (!q.empty()) {
-		int x = q.front().first;
-		int y = q.front().second;
+		int hx = q.front().first.first;
+		int hy = q.front().first.second;
+		int cost = q.front().second;
 		q.pop();
 
-		for (int a = 0; a < 4; a++)
-		{
-			int nx = x + dot[a][0];
-			int ny = y + dot[a][1];
-			if (ny <= N && nx <= M && nx >= 1 && ny >= 1) {
-				if (dan[nx][ny] == 0 && check[nx][ny] == 0)
-				{
-					dist[nx][ny] = dist[x][y] + 1;
-					check[nx][ny] = 1;
-					q.push(make_pair(nx, ny));
+
+		for (int i = 0; i < 4; i++) {
+			int nx = hx + movex[i];
+			int ny = hy + movey[i];
+
+			if (nx >= 0 && ny >= 0 && nx < n && ny < m) {
+				if (check[nx][ny] == false && box[nx][ny] == 0) {
+					box[nx][ny] = 1;
+					ans[nx][ny] = cost + 1;
+					check[nx][ny] = true;
+
+					q.push(make_pair(make_pair(nx, ny), cost + 1));
 				}
 			}
-
 		}
+
 	}
 
-	int ans = 0;
-	for (int a = 1; a <= M; a++)
-	{
-		for (int b = 1; b <= N; b++)
-		{
-			if (ans < dist[a][b])
-			{
-				ans = dist[a][b];
-			}
+	int Ans = 0;
+	bool flag = false;
+
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < m; j++) {
+			if (box[i][j] == 0) flag = true;
+			if (Ans < ans[i][j]) Ans = ans[i][j];
 		}
-	}
-	for (int a = 1; a <= M; a++)
-	{
-		for (int b = 1; b <= N; b++)
-		{
-			if (dan[a][b]==0&&check[a][b]==0)
-			{
-				ans = -1;
-			}
-		}
+		if (flag) break;
 	}
 
-	cout << ans;
+
+	if (complete == false) cout << 0 << '\n';
+	else {
+		if (flag) cout << -1 << '\n';
+		else cout << Ans << '\n';
+	}
 }
+/*
+	백준 7576번 토마토
+*/

@@ -15,5 +15,5 @@
 - [1759 암호 만들기](https://www.acmicpc.net/problem/1759)
 - [1182 부분수열의 합](https://www.acmicpc.net/problem/1182)
 - [14501 퇴사](https://www.acmicpc.net/problem/14501)
-- [15658 연산자 끼워넣기(2) - 미해결](https://www.acmicpc.net/problem/15658)
+- [15658 연산자 끼워넣기(2)](https://www.acmicpc.net/problem/15658)
 - [11723 집합](https://www.acmicpc.net/problem/11723)

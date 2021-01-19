@@ -17,7 +17,7 @@
 - [12100 2048(Easy)-미해결](https://www.acmicpc.net/problem/12100)
 - [2003 수들의 합 2](https://www.acmicpc.net/problem/2003)
 - [1806 부분합](https://www.acmicpc.net/problem/1806)
-- [1644 소수의 연속합-미해결](https://www.acmicpc.net/problem/1644)
+- [1644 소수의 연속합](https://www.acmicpc.net/problem/1644)
 - [1208 부분수열의 합 2-미해결](https://www.acmicpc.net/problem/1208)
 - [2143 두 배열의 합-미해결](https://www.acmicpc.net/problem/2143)
 - [7453 합이 0인 네 정수-미해결](https://www.acmicpc.net/problem/7453)

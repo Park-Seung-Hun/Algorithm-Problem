@@ -1,13 +1,11 @@
 #include <iostream>
 #include <queue>
-#include <map>
 using namespace std;
 
 int n, k;
 int ans_t = 987654321;
 int ans_c;
 bool check[100001];
-map<int, int> m;
 
 void bfs() {
 	queue<pair<int, int>> q;

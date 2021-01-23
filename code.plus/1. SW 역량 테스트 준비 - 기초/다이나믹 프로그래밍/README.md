@@ -8,3 +8,4 @@
 - [15988 1,2,3 더하기3](https://www.acmicpc.net/problem/15988)
 - [11052 카드 구매하기](https://www.acmicpc.net/problem/11052)
 - [16194 카드 구매하기 2](https://www.acmicpc.net/problem/16194)
+- [10844 쉬운 계단 ](https://www.acmicpc.net/problem/10844)

@@ -14,3 +14,7 @@
 - [9465 스티커](https://www.acmicpc.net/problem/9465)
 - [2156 포도주 시식](https://www.acmicpc.net/problem/2156)
 - [11053 가장 긴 증가하는 부분 수열](https://www.acmicpc.net/problem/11053)
+- [14002 가장 긴 증가하는 부분 수열 4](https://www.acmicpc.net/problem/14002)
+- [11055 가장 큰 증가하는 부분 수열](https://www.acmicpc.net/problem/11055)
+- [11722 가장 긴 감소하는 부분 수열](https://www.acmicpc.net/problem/11722)
+- [1912 연속합](https://www.acmicpc.net/problem/1912)

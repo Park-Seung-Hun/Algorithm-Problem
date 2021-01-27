@@ -19,6 +19,7 @@ Depth-First Search algorithm(깊이 우선 탐색 알고리즘)
 
 <img src="https://cdn.codeground.org/cg/images/note/algorithm_6-1.gif" width="600">
 <img src="https://cdn.codeground.org/cg/images/note/algorithm_6-2.jpg" width="400">
+사진출처: https://www.codeground.org/common/popCodegroundNote
 
 ##### Code
 > 스택 or 재귀함수를 통해 구현한다.

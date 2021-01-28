@@ -1,11 +1,11 @@
-# BaekJoon Online Judge
+<h1> Algorithm 문제 풀이</h1>
 
-Algorithm 문제 풀이
----
-
-
-- language : C++, Python
+<h2> Baekjoon Online Judge</h2>
+  
+> language : C++을 위주로 풀이하나 가끔 Python도 사용.
+<br>
 
 - [Problem source](https://www.acmicpc.net "BaekJoon Online Judge")
+
 
 ![내가 해결한 문제](./이미지/2021-01-14.PNG)

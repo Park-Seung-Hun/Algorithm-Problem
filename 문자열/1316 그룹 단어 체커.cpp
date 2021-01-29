@@ -5,7 +5,10 @@ string text;
 
 int c;
 int sum,t;
-int main() {
+int main() {	
+	ios_base::sync_with_stdio(NULL);
+	cin.tie(NULL);
+	cout.tie(NULL);
 	cin >> t;
     
 	for (int i = 0; i < t; i++) {

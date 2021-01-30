@@ -179,3 +179,4 @@ output:
 1 2 3 7 4 5 6
 */
 ```
+참고 사이트 : [코드그라운드 노트](https://www.codeground.org/common/popCodegroundNote), [Rise 마법의 슈퍼마리오 블로그](https://m.blog.naver.com/kks227/220796963742)

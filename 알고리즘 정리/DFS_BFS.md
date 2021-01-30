@@ -17,9 +17,8 @@ Depth-First Search algorithm(깊이 우선 탐색 알고리즘)
 2. 현재 정점의 방문 여부를 체크한다.
 3. 현재 정점과 인접한 간선을 검사해 연결된 정점들을 찾는다. 이때, 방문한 적이 있는 정점이면 skip하고 방문하지 않은 정점이면 해당 정점으로 다시 반복한다.
 
-<img src="https://cdn.codeground.org/cg/images/note/algorithm_6-1.gif" width="600">
-<img src="https://cdn.codeground.org/cg/images/note/algorithm_6-2.jpg" width="400">
-<h6>사진출처: https://www.codeground.org/common/popCodegroundNote</h6>
+<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fba7LU5%2FbtqEjDNlnmq%2FXOo122GKWgP62W3dAtGYtK%2Fimg.gif" width="600">
+<h6>사진출처: https://haningya.tistory.com/102?category=893241</h6>
 
 ##### Code
 > 스택 or 재귀함수를 통해 구현한다.
@@ -105,9 +104,9 @@ Breadth-First Search algorithm(넓이 우선 탐색 알고리즘)
 3. queue의 front를 pop하여 현재 정점으로 선언하고, 인접한 모든 간선을 검사하여 연결된 다음 정점을 찾아 다시 queue에 저장한다.
 4. queue가 빌 때까지 3의 과정을 반복한다.  
 
-<img src="https://cdn.codeground.org/cg/images/note/algorithm_7-1.gif" width="600">
-<img src="https://cdn.codeground.org/cg/images/note/algorithm_7-2.jpg" width="400">
-<h6>사진출처: https://www.codeground.org/common/popCodegroundNote</h6>
+
+<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fba7LU5%2FbtqEjDNlnmq%2FXOo122GKWgP62W3dAtGYtK%2Fimg.gif" width="600">
+<h6>사진출처: https://haningya.tistory.com/102?category=893241</h6>
 
 ##### Code
 > queue를 통해 구현한다.

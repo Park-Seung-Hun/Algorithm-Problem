@@ -6,7 +6,7 @@
 - [백트래킹](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/Backtracking.md)
 
 ## 그래프 최단거리 
-- 다익스트라
+- [다익스트라](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/Dijkstra's%20algorithm.md)
 > 한 정점에서 다른 모든 정점까지의 최단거리 (가중치: 양)
 
 - [벨만포드](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/Bellman-Ford%20Algorithm.md)

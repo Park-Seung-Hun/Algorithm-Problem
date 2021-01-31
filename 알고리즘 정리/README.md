@@ -1,5 +1,5 @@
-#📖알고리즘 정리
----
+📖알고리즘 정리
+--
 
 ## 그래프 순회
 - [DFS/BFS](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/DFS_BFS.md)

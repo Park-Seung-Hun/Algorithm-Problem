@@ -1,6 +1,7 @@
 # __그래프와 BFS-DFS 문제__
 ---
 문제 찾는 법: https://www.acmicpc.net/ + 문제번호
+[알고리즘 찾기](https://github.com/Park-Seung-Hun/Algorithm-Problem/tree/main/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC)
 
 - 문제 목록
   - `10026 적록색약`

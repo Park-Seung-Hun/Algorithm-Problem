@@ -1,15 +1,19 @@
 # __완전 탐색 (백트래킹)__
 ---
 
-- [15649 N과 M(1)](https://www.acmicpc.net/problem/15649)
-- [15650 N과 M(2)](https://www.acmicpc.net/problem/15650)
-- [15651 N과 M(3)](https://www.acmicpc.net/problem/15651)
-- [15652 N과 M(4)](https://www.acmicpc.net/problem/15652)
-- [15654 N과 M(5)](https://www.acmicpc.net/problem/15654)
-- [15655 N과 M(6)](https://www.acmicpc.net/problem/15655)
-- [15656 N과 M(7)](https://www.acmicpc.net/problem/15656)
-- [15657 N과 M(8)](https://www.acmicpc.net/problem/15657)
-- [15663 N과 M(9)](https://www.acmicpc.net/problem/15663)
-- [15664 N과 M(10)](https://www.acmicpc.net/problem/15664)
-- [15665 N과 M(11)](https://www.acmicpc.net/problem/15665)
-- [15666 N과 M(12)](https://www.acmicpc.net/problem/15666)
+>문제 찾는 법: https://www.acmicpc.net/ + 문제번호  <br>
+>[알고리즘](https://github.com/Park-Seung-Hun/Algorithm-Problem/tree/main/-%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC)
+
+- 문제 목록
+  - `15649 N과 M(1)`
+  - `15650 N과 M(2)`
+  - `15651 N과 M(3)`
+  - `15652 N과 M(4)`
+  - `15654 N과 M(5)`
+  - `15655 N과 M(6)`
+  - `15656 N과 M(7)`
+  - `15657 N과 M(8)`
+  - `15663 N과 M(9)`
+  - `15664 N과 M(10)`
+  - `15665 N과 M(11)`
+  - `15666 N과 M(12)`

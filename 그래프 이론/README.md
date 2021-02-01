@@ -2,7 +2,7 @@
 ---
 
 >문제 찾는 법: https://www.acmicpc.net/ + 문제번호  <br>
->[알고리즘](https://github.com/Park-Seung-Hun/Algorithm-Problem/tree/main/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC)
+>[알고리즘](https://github.com/Park-Seung-Hun/Algorithm-Problem/tree/main/-%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC)
 
 - 문제 목록
   - `10026 적록색약`

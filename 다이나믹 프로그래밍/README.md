@@ -1,20 +1,22 @@
 # __다이나믹 프로그래밍__
 ---
+문제 찾는 법: https://www.acmicpc.net/ + 문제번호
 
-- [1463 1로 만들기](https://www.acmicpc.net/problem/1463)
-- [11726 2xn 타일링](https://www.acmicpc.net/problem/11726)
-- [11727 2xn 타일링 2](https://www.acmicpc.net/problem/11727)
-- [9095 1,2,3 더하기](https://www.acmicpc.net/problem/9095)
-- [15988 1,2,3 더하기3](https://www.acmicpc.net/problem/15988)
-- [11052 카드 구매하기](https://www.acmicpc.net/problem/11052)
-- [16194 카드 구매하기 2](https://www.acmicpc.net/problem/16194)
-- [10844 쉬운 계단 수](https://www.acmicpc.net/problem/10844)
-- [11057 오르막 수](https://www.acmicpc.net/problem/11057)
-- [2193 이친수](https://www.acmicpc.net/problem/2193)
-- [9465 스티커](https://www.acmicpc.net/problem/9465)
-- [2156 포도주 시식](https://www.acmicpc.net/problem/2156)
-- [11053 가장 긴 증가하는 부분 수열](https://www.acmicpc.net/problem/11053)
-- [14002 가장 긴 증가하는 부분 수열 4](https://www.acmicpc.net/problem/14002)
-- [11055 가장 큰 증가하는 부분 수열](https://www.acmicpc.net/problem/11055)
-- [11722 가장 긴 감소하는 부분 수열](https://www.acmicpc.net/problem/11722)
-- [1912 연속합](https://www.acmicpc.net/problem/1912)
+- `10844 쉬운 계단 수`
+- `11052 카드 구매하기`
+- `11053 가장 긴 증가하는 부분 수열`
+- `11055 가장 큰 증가하는 부분 수열`
+- `11057 오르막 수`
+- `11722 가장 긴 감소하는 부분 수열`
+- `11726 2xn 타일링`
+- `11727 2xn 타일링 2`
+- `14002 가장 긴 증가하는 부분 수열 4`
+- `1463 1로 만들기`
+- `15988 1,2,3 더하기 3`
+- `15990 1,2,3 더하기 5`
+- `16194 카드 구매하기 2`
+- `1912 연속합`
+- `2156 포도주`
+- `2193 이친수`
+- `9095 1,2,3 더하기`
+- `9465 스티커`

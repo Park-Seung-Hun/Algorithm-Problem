@@ -22,7 +22,7 @@ int main() {
 			for (int i = r; i <= n; i++) dp[i] = (dp[i - 1] + dp[i - 2] + dp[i - 3]);
 		}
 		r = n;
-		cout << dp[n] << '\n';;
+		cout << dp[n] << '\n';
 	}
 	
 	

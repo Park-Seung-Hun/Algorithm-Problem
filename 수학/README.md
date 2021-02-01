@@ -1,8 +1,18 @@
 # __수학__
 ---
 
-- [1072 게임](https://www.acmicpc.net/problem/1072)
-- [1541 잃어버린 괄호](https://www.acmicpc.net/problem/1541)
-- [1676 팩토리얼 0의 개수](https://www.acmicpc.net/problem/1676)
-- [1699 제곱수의 합](https://www.acmicpc.net/problem/1699)
-- [1735 분수 합](https://www.acmicpc.net/problem/1735) 
+>문제 찾는 법: https://www.acmicpc.net/ + 문제번호  <br>
+>[알고리즘](https://github.com/Park-Seung-Hun/Algorithm-Problem/tree/main/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC)
+
+- 문제 목록
+  - `10430 최대공약수와 최소공배수`
+  - `1072 게임`
+  - `1541 잃어버린 괄호`
+  - `1676 팩토리얼 0의 개수`
+  - `1699 제곱수의 합`
+  - `1735 분수 합`
+  - `1934 최소공배수`
+  - `1978 소수 찾기`
+  - `2609 최대공약수와 최소공배수`
+  - `6588번 골드바흐의 추측`
+  - `9613_GCD합`

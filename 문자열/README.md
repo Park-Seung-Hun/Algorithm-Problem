@@ -1,10 +1,14 @@
 # __문자열__
 ---
 
-- [1181 단어 정렬](https://www.acmicpc.net/problem/1181)
-- [1316 그룹 단어 체커](https://www.acmicpc.net/problem/1316)
-- [1427 소트인사이드](https://www.acmicpc.net/problem/1427)
-- [1764 듣보잡](https://www.acmicpc.net/problem/1764)
-- [2941 크로아티아 알파벳](https://www.acmicpc.net/problem/2941) 
-- [4949 균형잡힌 세상](https://www.acmicpc.net/problem/4949) 
-- [5525 IOIOI](https://www.acmicpc.net/problem/5525) 
+>문제 찾는 법: https://www.acmicpc.net/ + 문제번호  <br>
+>[알고리즘](https://github.com/Park-Seung-Hun/Algorithm-Problem/tree/main/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC)
+
+- 문제 목록
+  - `1181 단어 정렬`
+  - `1316 그룹 단어 체커`
+  - `1427 소트인사이드`
+  - `1764 듣보잡`
+  - `2941 크로아티아 알파벳`
+  - `4949 균형잡힌 세상`
+  - `5525 IOIOI`

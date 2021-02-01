@@ -1,11 +1,19 @@
-# __구현__
+# __구현_시뮬레이션__
 ---
 
-- [1051 숫자 정사각형](https://www.acmicpc.net/problem/1051)
-- [10773 제로](https://www.acmicpc.net/problem/10773)
-- [11286 절댓값 힙](https://www.acmicpc.net/problem/11286)
-- [1748 수 이어 쓰기 1](https://www.acmicpc.net/problem/1748)
-- [1966 프린터 큐](https://www.acmicpc.net/problem/1966)
-- [2108 통계학](https://www.acmicpc.net/problem/2108)
-- [2960 에라토스테네스의 체](https://www.acmicpc.net/problem/2960)
-- [5430 AC](https://www.acmicpc.net/problem/5430)
+>문제 찾는 법: https://www.acmicpc.net/ + 문제번호  <br>
+>[알고리즘](https://github.com/Park-Seung-Hun/Algorithm-Problem/tree/main/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC)
+
+- 문제 목록
+  - `1051 숫자 정사각형`
+  - `10773 제로`
+  - `11286 절댓값 힙`
+  - `14503 로봇 청소기`
+  - `14891 톱니바퀴`
+  - `15662 톱니바퀴 (2)`
+  - `1748번 수 이어 쓰기 1`
+  - `1966번 프린터 큐`
+  - `2108 통계학`
+  - `2960 에라토스테네스의 체`
+  - `3568 iSharp`
+  - `5430 AC`

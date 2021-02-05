@@ -1,5 +1,8 @@
 📖알고리즘 정리
 --
+## 탐색 알고리즘
+- [이진 탐색](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/-%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/Binary%20Search.md)
+    
 
 ## 그래프 순회
 - [DFS/BFS](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/-%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/DFS_BFS.md)

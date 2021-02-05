@@ -17,6 +17,16 @@ Binary Search(이진 탐색)
 
 ##### Code
 
+- c++에선 `<algorithm> 헤더 파일`에 함수가 존재한다.
+  1. `binary_search(시작 지점,끝 지점,찾으려는 값)`: 찾는 값이 존재하면 True, 아니면 False를 반환한다.
+  2. `lower_bound(시작 지점,끝 지점,찾으려는 값)`: 찾는 값과 같거나, 작은 값 중에서 가장 큰 값을 찾는다.
+  		- value을 찾을 땐 `*lower_bound(시작 지점,끝 지점,찾으려는 값)` 
+		- index를 찾을 땐 `lower_bound(시작 지점,끝 지점,찾으려는 값) - 시작 지점` , 값이 없으면 마지막 index를 반환
+  3. `upper_bound(시작 지점,끝 지점,찾으려는 값)`: 찾는 값보다 큰 값중에서 가장 작은 값을 찾는다.
+  		- value을 찾을 땐 `*upper_bound(시작 지점,끝 지점,찾으려는 값)`
+		- index를 찾을 땐 `upper_bound(시작 지점,끝 지점,찾으려는 값) - 시작 지점` , 값이 없으면 마지막 index를 반환
+<br>
+
 ```c++
 #include <iostream>
 #include <vector>

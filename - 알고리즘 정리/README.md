@@ -1,8 +1,11 @@
 📖알고리즘 정리
 --
-## 탐색 알고리즘
+## 알고리즘
 - [이진 탐색](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/-%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/Binary%20Search.md)
-    
+    - 정렬된 배열에서 원하는 값을 빠른 시간내에 찾는 알고리즘
+- [투 포인터](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/-%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/Two%20Pointers.md)
+    1. 정렬된 두 배열을 하나로 합치는 경우
+    2. 자연수로 된 배열의 부분 연속합이 k인 경우의 수
 
 ## 그래프 순회
 - [DFS/BFS](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/-%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/DFS_BFS.md)

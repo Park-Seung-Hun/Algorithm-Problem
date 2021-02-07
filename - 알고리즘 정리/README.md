@@ -1,5 +1,9 @@
 📖알고리즘 정리
 --
+## 수학
+- [수학1](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/-%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/%EC%88%98%ED%95%991.md)
+    - 나머지와 연산, 최대공약수, 최소공배수, 진법 변환, 소수, 소인수분해, 팩토리얼
+    
 ## 알고리즘
 - [이진 탐색](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/-%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/Binary%20Search.md)
     - 정렬된 배열에서 원하는 값을 빠른 시간내에 찾는 알고리즘
@@ -9,8 +13,12 @@
 
 ## 그래프 순회
 - [DFS/BFS](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/-%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/DFS_BFS.md)
+    - DFS: 현재 정점에 연결된 정점 순서대로<br>
+    - BFS: 현재 정점에 연결된 모든 정점 먼저<br>
+    
 - [백트래킹](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/-%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/Backtracking.md)
-
+    - 유망성이 없는 정점은 가지치기
+    
 ## 그래프 최단거리
 - [다익스트라](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/-%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/Dijkstra's%20algorithm.md)
 > 한 정점에서 다른 모든 정점까지의 최단거리 (가중치: 양)

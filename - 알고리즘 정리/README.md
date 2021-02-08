@@ -3,6 +3,9 @@
 ## 수학
 - [수학1](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/-%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/%EC%88%98%ED%95%991.md)
     - 나머지와 연산, 최대공약수, 최소공배수, 진법 변환, 소수, 소인수분해, 팩토리얼
+  
+- [수학2](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/-%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/%EC%88%98%ED%95%992.md)
+    - a^b, 행렬, 피보나치수, 이항 계수, 카탈란 수, 오일러 피함수, 나머지 연산2
     
 ## 알고리즘
 - [이진 탐색](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/-%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/Binary%20Search.md)

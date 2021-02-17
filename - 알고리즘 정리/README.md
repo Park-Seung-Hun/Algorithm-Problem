@@ -2,7 +2,7 @@
 --
 ## 수학
 - [수학1](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/-%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/%EC%88%98%ED%95%991.md)
-    - 나머지와 연산, 최대공약수, 최소공배수, 진법 변환, 소수, 소인수분해, 팩토리얼
+    - 나머지와 연산, 최대공약수(GCD), 최소공배수(LCM), 진법 변환, 소수, 소인수분해, 팩토리얼
   
 - [수학2](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/-%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/%EC%88%98%ED%95%992.md)
     - a^b, 행렬, 피보나치수, 이항 계수, 카탈란 수, 오일러 피함수, 나머지 연산2
@@ -13,6 +13,10 @@
 - [투 포인터](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/-%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/Two%20Pointers.md)
     1. 정렬된 두 배열을 하나로 합치는 경우
     2. 자연수로 된 배열의 부분 연속합이 k인 경우의 수
+
+## 트리
+- [트리 1](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/-%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/%ED%8A%B8%EB%A6%AC1.md)
+    - 트리, 이진 트리, 트리의 순회(전위 중위 후위), 트리의 부모 찾기, 트리의 지름
 
 ## 그래프 순회
 - [DFS/BFS](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/-%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/DFS_BFS.md)

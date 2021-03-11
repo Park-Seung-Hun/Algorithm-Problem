@@ -4,6 +4,10 @@
 
 - [코테에서 쓰이는 문법](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/-%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8.md)
 
+### SQL 정리
+
+- [코테에서 쓰이는 문법]()
+
 ## 📖알고리즘 정리
 
 ### 수학

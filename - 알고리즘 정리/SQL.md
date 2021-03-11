@@ -2,7 +2,8 @@
 
 1. [SELECT](#SELECT)
 2. [JOIN](#JOIN)
-3. [SUM,MAX,MIB](#SUM,MAX,MIN)
+3. [MAX,MIN,COUNT,SUM](#MAX,MIN,COUNT,SUM)
+4. [GROUP BY](#GROUP-BY)
 
 ### SELECT
 
@@ -142,4 +143,88 @@ ORDER BY P.CART_ID
 - RIGHT JOIN: 오른쪽 TABLE을 기준으로 JOIN
   - `왼쪽 테이블 ID IS NULL`을 하게되면 오른쪽 테이블의 정보만 나온다.
 
-<img src="https://blog.kakaocdn.net/dn/bVqyCr/btqBlijYkN3/RZMFMrhcZZJI7iGu1AXdKK/img.png">
+<img src="https://blog.kakaocdn.net/dn/bVqyCr/btqBlijYkN3/RZMFMrhcZZJI7iGu1AXdKK/img.png"><br>
+
+<br>
+
+### MAX,MIN,COUNT,SUM
+
+1.  최댓값 구하기
+    - 가장 최근에 들어온 동물은 언제 들어왔는지 조회하는 SQL
+
+```sql
+SELECT MAX(DATETIME)
+FROM ANIMAL_INS
+```
+
+2.  최솟값 구하기
+    - 가장 먼저 들어온 동물은 언제 들어왔는지 조회하는 SQL
+
+```sql
+SELECT MIN(DATETIME)
+FROM ANIMAL_INS
+```
+
+3.  동물 수 구하기
+    - 동물 보호소에 동물이 몇 마리 들어왔는지 조회하는 SQL
+
+```sql
+SELECT COUNT(ANIMAL_ID) count
+FROM ANIMAL_INS
+```
+
+4.  중복 제거하기
+    - 동물 보호소에 들어온 동물의 이름은 몇 개인지 조회하는 SQL (이름이 NULL인 경우 집계하지 않으며 중복 이름은 하나로)
+
+```sql
+SELECT COUNT(A.NAME) count
+FROM (SELECT NAME FROM ANIMAL_INS GROUP BY NAME) AS A
+WHERE NAME IS NOT NULL
+```
+
+### GROUP BY
+
+1. 고양이와 개는 몇 마리 있을까
+   - 동물 보호소에 들어온 동물 중 고양이와 개가 각각 몇마리인지 조회하는 SQL(고양이를 개 먼저 조회)
+
+```sql
+SELECT ANIMAL_TYPE, COUNT(*) AS count
+FROM ANIMAL_INS
+WHERE ANIMAL_TYPE = 'Cat' OR ANIMAL_TYPE = 'Dog'
+GROUP BY ANIMAL_TYPE
+ORDER BY ANIMAL_TYPE
+```
+
+2. 동명 동물 수 찾기
+   - 동물 보호소에 들어온 동물 이름 중 두 번 이상 쓰인 이름과 해당 이름이 쓰인 횟수를 조회하는 SQL (이름 없는 동물은 제외, 결과는 이름 순)
+
+```sql
+SELECT NAME, COUNT(*) AS count
+FROM ANIMAL_INS
+WHERE NAME IS NOT NULL
+GROUP BY NAME
+HAVING count > 1
+ORDER BY NAME
+```
+
+3. 입양 시각 구하기(1)
+   - 보호소에서는 몇 시에 입양이 가장 활발하게 일어나는지 알아보려 합니다. 09::00부터 19:59까지, 각 시간대 별로 입양이 몇 건이나 발생했는지 조회하는 SQL문을 작성(결과는 시간대 순으로 정렬)
+
+```sql
+SELECT HOUR(DATETIME), COUNT(*) AS count
+FROM ANIMAL_OUTS
+WHERE HOUR(DATETIME) >=9  AND HOUR(DATETIME) < 20
+GROUP BY HOUR(DATETIME)
+ORDER BY HOUR(DATETIME)
+```
+
+4. 입양 시각 구하기(2)
+   - 보호소에서는 몇 시에 입양이 가장 활발하게 일어나는지 알아보려 합니다. 0시부터 23시까지, 각 시간대별로 입양이 몇 건이나 발생했는지 조회하는 SQL문을 작성 (결과는 시간대 순으로 정렬)
+
+```sql
+SET @HOUR = -1; SELECT (@HOUR := @HOUR +1) AS HOUR, (SELECT COUNT(*) FROM ANIMAL_OUTS WHERE HOUR(DATETIME) = @HOUR) AS COUNT FROM ANIMAL_OUTS WHERE @HOUR < 23
+```
+
+- HAVING: 집계함수(SUM,COUNT,....)를 가지고 조건 비교시 사용.
+  - GROUP BY 절과 함께 사용.
+- DATETIME: HOUR, MINUTE, SECOND와 같이 사용 가능.

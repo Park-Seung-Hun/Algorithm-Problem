@@ -31,7 +31,8 @@
   - 트리, 이진 트리, 트리의 순회(전위 중위 후위), 트리의 부모 찾기, 트리의 지름
 - [트리 2](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/-%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/%ED%8A%B8%EB%A6%AC2.md)
   - 이진 탐색 트리 만들기, LCA
-
+- [세그먼트 트리](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/-%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/%EC%84%B8%EA%B7%B8%EB%A8%BC%ED%8A%B8%20%ED%8A%B8%EB%A6%AC.md)
+  - 배열 구간 연산, 
 ### 그래프 순회
 
 - [DFS/BFS](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/-%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/DFS_BFS.md)

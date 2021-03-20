@@ -42,6 +42,8 @@
   - BFS: 현재 정점에 연결된 모든 정점 먼저<br>
 - [백트래킹](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/-%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/Backtracking.md)
   - 유망성이 없는 정점은 가지치기
+- [위상 정렬](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/-%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/%EC%9C%84%EC%83%81%20%EC%A0%95%EB%A0%AC.md)
+  - 유향 그래프의 순서를 정하는 
 
 ### 그래프 최단거리
 

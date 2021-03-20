@@ -9,7 +9,9 @@
 - [코테에서 쓰이는 문법](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/-%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/SQL.md)
 
 ## 📖알고리즘 정리
-
+### C++ 문법
+  - [문자열, 벡터](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/-%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/%EC%9E%90%EC%A3%BC%20%EC%93%B0%EC%9D%B4%EB%8A%94%20%EB%AC%B8%EC%9E%90%EC%97%B4%2C%EB%B2%A1%ED%84%B0%20%EC%A0%95%EB%A6%AC.md)
+    - 문자열 parsing, 소문자 대문자변환, find, erase
 ### 수학
 
 - [수학1](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/-%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/%EC%88%98%ED%95%991.md)

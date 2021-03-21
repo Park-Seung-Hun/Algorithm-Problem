@@ -2,7 +2,8 @@
 
 ### 자바스크립트 정리
 
-- [코테에서 쓰이는 문법](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/-%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8.md)
+- [기본 문법](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/-%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20%EA%B8%B0%EB%B3%B8.md)
+  - 변수와 상수, 자료형, 형 변환, 기본 연산자와 수학, 비교 연산자, if와 ?, 논리 연산자, 반복문, 함수, 화살표 함수 기본
 
 ### SQL 정리
 

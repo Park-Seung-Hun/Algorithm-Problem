@@ -4,6 +4,10 @@
 
 - [기본 문법](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/-%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20%EA%B8%B0%EB%B3%B8.md)
   - 변수와 상수, 자료형, 형 변환, 기본 연산자와 수학, 비교 연산자, if와 ?, 논리 연산자, 반복문, 함수, 화살표 함수 기본
+- [객체](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/-%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20%EA%B0%9D%EC%B2%B4.md)
+  - 객체 선언 방법, 리터럴과 프로퍼티, in연산자, for...in반복문, 복사, 생성자 
+- [숫자형](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/-%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20%EC%88%AB%EC%9E%90%ED%98%95.md)
+  - 숫자 표현, isNaN isFinite, parseInt or parseFloat, 기타 수학 함수
 
 ### SQL 정리
 

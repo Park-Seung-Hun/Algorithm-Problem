@@ -10,7 +10,8 @@
   - 숫자 표현, isNaN isFinite, parseInt or parseFloat, 기타 수학 함수
 - [문자열](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/-%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20%EB%AC%B8%EC%9E%90%EC%97%B4.md)
   - 따옴표, 문자열 프로퍼티, 문자열 불변성, 대소문자 변경하기, 부분 문자열 찾기, 부분 문자열 추출하기, 문자열 
-
+- [배열](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/-%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20%EB%B0%B0%EC%97%B4.md)
+  - 배열 선언, pop push shift unshift, 반복문(일반, for of, for in), 다차원 배열, toString
 ### SQL 정리
 
 - [코테에서 쓰이는 문법](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/-%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/SQL.md)

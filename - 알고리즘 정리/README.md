@@ -14,14 +14,18 @@
   - 배열 선언, pop push shift unshift, 반복문(일반, for of, for in), 다차원 배열, toString
 - [배열과 메서드](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/-%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20%EB%B0%B0%EC%97%B4%EA%B3%BC%20%EB%A9%94%EC%84%9C%EB%93%9C.md)
   - splice, slice, concat, forEach, indexOf, includes, find, filter, map, sort, reverse, split, join
-### SQL 정리
+- [맵과 셋](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/-%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20%EB%A7%B5%EA%B3%BC%20%EC%85%8B.md)
+  - 맵, 맵의 요소에 반복작업, 객체를 맵, 맵을 객체, 셋, 셋의 요소에 반복작업
 
-- [코테에서 쓰이는 문법](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/-%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/SQL.md)
 
-## 📖알고리즘 정리
-### C++ 문법
+## 📖코딩 테스트 알고리즘 정리
+### C++ 
   - [문자열, 벡터](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/-%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/%EC%9E%90%EC%A3%BC%20%EC%93%B0%EC%9D%B4%EB%8A%94%20%EB%AC%B8%EC%9E%90%EC%97%B4%2C%EB%B2%A1%ED%84%B0%20%EC%A0%95%EB%A6%AC.md)
     - 문자열 parsing, substr, 소문자 대문자변환, find, erase
+### SQL 정리
+- [코테에서 쓰이는 문법](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/-%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/SQL.md)
+
+
 ### 수학
 
 - [수학1](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/-%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/%EC%88%98%ED%95%991.md)

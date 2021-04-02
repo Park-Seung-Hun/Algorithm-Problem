@@ -26,7 +26,7 @@ function solution(str1, str2) {
             son++;
         }
     }
-     2. 두 집합의 합집합 크기
+    // 2. 두 집합의 합집합 크기
     parent-=son;
 
     if(parent===0&&son===0) return 65536;

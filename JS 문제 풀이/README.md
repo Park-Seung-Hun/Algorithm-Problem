@@ -1,8 +1,14 @@
 # JavaScript 코딩 테스트 준비
+## 목차
   - [문자열](#문자열)
   - [배열](#배열)
   - [우선순위큐](#우선순위-큐)
   - [순열과 조합](#순열과-조합)
+  - [소수 찾기](#소수-찾기)
+  - [BFS](#BFS)
+  - [DFS](#DFS)
+
+
 1. includes(item): item이 존재하는지 안하는지 확인한다.
 
 ### 문자열
@@ -20,7 +26,7 @@ console.log(vale.toString(3)); // 11110 => 10진법 수를 해당 진법 문자�
 8. 문자열 뒤에 문자열 추가: `str+= str1;`, 앞에 문자열 추가: `str = str1 + str; `
 9. 모든 문자 대문자 `str.toUpperCase()`, 소문자 `str.toLowerCase()`
 
-[위로 가기](#top)
+[위로 가기](#목차)
 
 
 ### 배열
@@ -36,7 +42,7 @@ Array.from({length: 5}, (undefined, i) => i); => i(index) 1씩 증가
 ```
 7. 배열의 정렬함수
 
-```node
+```
 정렬 함수 Tip.
 이 함수가 a, b 두개의 element를 파라미터로 입력받을 경우,
 이 함수가 리턴하는 값이 0보다 작을 경우,  a가 b보다 앞에 오도록 정렬하고,
@@ -45,7 +51,7 @@ Array.from({length: 5}, (undefined, i) => i); => i(index) 1씩 증가
 ```
 - 정렬함수 `오름차순`
 
-```node
+```js
 function compareNum(a,b){
     if(a<b) return -1;
     if(a===b)return 0;
@@ -55,7 +61,7 @@ function compareNum(a,b){
 
 - 정렬함수 `내림차순`
 
-```node
+```js
 function compare(a,b){
     if(a<b) return 1;
     if(a==b)return 0;
@@ -64,7 +70,7 @@ function compare(a,b){
 ```
 - `문자열 정렬함수`
 
-```node
+```js
 if(f===s) return (a>b) - (a<b) => a>b이면 1 , a<b이면 -1 반환
 else return (f>s) - (f<s); => 마찬가지로 f>s이면 1, f<s이면 -1 반환 (일반 정렬과 같다.)
 ```
@@ -72,7 +78,7 @@ else return (f>s) - (f<s); => 마찬가지로 f>s이면 1, f<s이면 -1 반환 (
 8. 배열의 최대 최소
 - 배열의 `최대 값`
 
-```node
+```js
 Math.max.apply(null,arr)
 
 // 배열의 크기가 ~10^7 이상이 될 경우
@@ -83,7 +89,7 @@ var max = array.reduce( function (previous, current) {
 
 - 배열의 `최소 값`
 
-```node
+```js
  Math.min.apply(null,arr)
 
 // 배열의 크기가 ~10^7 이상이 될 경우
@@ -92,9 +98,12 @@ var min = array.reduce( function (previous, current) {
 });
 ```
 
+[위로 가기](#목차)
+
+
 
 ### 우선순위 큐
-```node
+```js
 let item;
 priority_queue.push(item);
 priority_queue.sort(function (a,b){
@@ -103,11 +112,14 @@ priority_queue.sort(function (a,b){
 });
 ```
 
+[위로 가기](#목차)
+
+
 ### 순열과 조합
 - 조합
   - 순서가 바뀌어도 하나의 조합으로 생각한다.
 
-```node
+```js
 const getCombinations = function (arr, selectNumber) {
   const results = [];
   if (selectNumber === 1) return arr.map((value) => [value]); // 1개씩 택할 때, 바로 모든 배열의 원소 return
@@ -133,7 +145,7 @@ Output: [ [1, 2, 3], [1, 2, 4], [1, 3, 4], [2, 3, 4] ]
 - 순열
   - 순서가 바뀌면 다른 순열이다.
 
-```node
+```js
 const getPermutations= function (arr, selectNumber) {
   const results = [];
   if (selectNumber === 1) return arr.map((value) => [value]); // 1개씩 택할 때, 바로 모든 배열의 원소 return
@@ -165,4 +177,70 @@ console.log(result);
 //   [ 4, 2, 1 ], [ 4, 2, 3 ],
 //   [ 4, 3, 1 ], [ 4, 3, 2 ]
 // ]
+```
+
+[위로 가기](#목차)
+
+
+### 소수 찾기
+  - 에라토스테네스의 체를 이용한 소수 찾기
+
+```js
+let check=Array.from({length: prime[prime.length-1]+1}, ()=>false); // 소수 체크 배열
+
+check[0]=check[1]=true;
+let maxNum==prime[prime.length-1];
+for(let i=2;i<maxNum;i++){
+    if(check[i]===false){
+        for(let j=i+i;j<=maxNum;j+=i) check[j]=true;
+    }
+}
+for(let num of prime) {
+    if(check[num]===false) answer++;
+}
+```
+
+[위로 가기](#목차)
+
+### BFS
+
+```js
+//  BFS 정의
+let visited = Array.from({length:n},()=>false); // 방문 배열
+    const bfs = function(cur){
+        let queue = [];
+        queue.push(cur);
+
+        while(queue.length!==0){
+            let here = queue.shift();
+
+            for(let i=0;i<edge[here].length;i++){
+                let there = edge[here][i];
+                if(visited[there]) continue;
+                visited[there]=true;
+                queue.push(there);
+            }
+        }
+    }
+```
+
+
+### dfs
+
+```js
+let check = Array.from({length: n},()=>false);
+const dfs = function(str,tg,cnt){
+    if(str===tg){
+        if(cnt<answer) answer=cnt;
+        return;
+    }
+
+    for(let i=0;i<words.length;i++){
+        if(checkStr(str,words[i])&&check[i]===false){
+            check[i]=true;
+            dfs(words[i],tg,cnt+1);
+            check[i]=false;
+        }
+    }
+}
 ```

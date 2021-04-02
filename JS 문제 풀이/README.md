@@ -7,7 +7,7 @@
   - [소수 찾기](#소수-찾기)
   - [BFS](#BFS)
   - [DFS](#DFS)
-
+  - [다익스트라](#다익스트라)
 
 1. includes(item): item이 존재하는지 안하는지 확인한다.
 
@@ -224,8 +224,10 @@ let visited = Array.from({length:n},()=>false); // 방문 배열
     }
 ```
 
+[위로 가기](#목차)
 
-### dfs
+
+### DFS
 
 ```js
 let check = Array.from({length: n},()=>false);
@@ -244,3 +246,56 @@ const dfs = function(str,tg,cnt){
     }
 }
 ```
+
+[위로 가기](#목차)
+
+### 다익스트라
+
+```js
+
+// vertex를 만들기 위한 2차원 배열
+let vertex = new Array(n+1);
+for(let i=0;i<=n;i++) vertex[i]=[];
+for(let i=0;i<edge.length;i++){
+    let from = edge[i][0];
+    let to = edge[i][1];
+
+    vertex[from].push(to);
+    vertex[to].push(from);
+}
+
+// 다익스트라 => 우선순위 큐를 이용하여 동작한다.
+let Dist = Array.from({length:n+1},()=> 987654321);
+const Dijkstra = function(start){
+    let pq = [];
+    pq.push([1,start]);
+    Dist[start]=0;
+
+    while(pq.length!==0){
+        let pq_tmp=pq.shift()
+        let cost = pq_tmp[0];
+        let cur = pq_tmp[1];
+
+        if(cost>max) max=cost;
+
+        for(let i=0;i<vertex[cur].length;i++){
+            let next = vertex[cur][i];
+            let ncost = 1;
+
+            if(Dist[next]>cost+ncost){
+                Dist[next] = cost+ncost;
+                pq.push([Dist[next],next]);
+                pq.sort(function (a,b){
+                    if(a[0]<b[0]) return -1;
+                    if(a[0]===b[0]) return 0;
+                    if(a[0]>b[0]) return 1;
+                });
+            }
+        }
+    }
+}
+
+Dijkstra(1);
+```
+
+[위로 가기](#목차)

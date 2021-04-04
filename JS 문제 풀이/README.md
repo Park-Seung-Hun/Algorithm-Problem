@@ -99,6 +99,20 @@ var min = array.reduce( function (previous, current) {
 });
 ```
 
+9. 배열의 합계 평균
+
+```js
+// 배열의 합계
+const sum = arr.reduce(function add(sum, currValue) {
+      return sum + currValue;
+}, 0);
+
+// 배열의 평균
+const average = sum / arr.length;
+
+```
+
+
 [위로 가기](#목차)
 
 

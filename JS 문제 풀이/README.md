@@ -8,6 +8,7 @@
   - [BFS](#BFS)
   - [DFS](#DFS)
   - [다익스트라](#다익스트라)
+  - [GCD LCM](#GCD-LCM)
 
 1. includes(item): item이 존재하는지 안하는지 확인한다.
 
@@ -296,6 +297,24 @@ const Dijkstra = function(start){
 }
 
 Dijkstra(1);
+```
+
+[위로 가기](#목차)
+
+### GCD LCM
+
+```js
+// 최대 공약수
+const gcd = function(a,b){
+    if(b===0) return a;
+    else return gcd(b,a%b);
+}
+
+// 최소 공배수
+const lcm = function(a,b){
+    let g=gcd(a,b);
+    return g*parseInt(a/g)*parseInt(b/g);
+}
 ```
 
 [위로 가기](#목차)

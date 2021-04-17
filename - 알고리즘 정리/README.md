@@ -2,19 +2,19 @@
 
 ### 자바스크립트 정리
 
-- [기본 문법](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/-%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20%EA%B8%B0%EB%B3%B8.md)
+- [기본 문법](./알고리즘/자바스크립트-기본.md)
   - 변수와 상수, 자료형, 형 변환, 기본 연산자와 수학, 비교 연산자, if와 ?, 논리 연산자, 반복문, 함수, 화살표 함수 기본
-- [객체](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/-%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20%EA%B0%9D%EC%B2%B4.md)
+- [객체](./알고리즘/자바스크립트-객체.md)
   - 객체 선언 방법, 리터럴과 프로퍼티, in연산자, for...in반복문, 복사, 생성자
-- [숫자형](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/-%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20%EC%88%AB%EC%9E%90%ED%98%95.md)
+- [숫자형](./알고리즘/자바스크립트-숫자형.md)
   - 숫자 표현, isNaN isFinite, parseInt or parseFloat, 기타 수학 함수
-- [문자열](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/-%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20%EB%AC%B8%EC%9E%90%EC%97%B4.md)
+- [문자열](./알고리즘/자바스크립트-문자열.md)
   - 따옴표, 문자열 프로퍼티, 문자열 불변성, 대소문자 변경하기, 부분 문자열 찾기, 부분 문자열 추출하기, 문자열
-- [배열](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/-%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20%EB%B0%B0%EC%97%B4.md)
+- [배열](./알고리즘/자바스크립트-배열.md)
   - 배열 선언, pop push shift unshift, 반복문(일반, for of, for in), 다차원 배열, toString
-- [배열과 메서드](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/-%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20%EB%B0%B0%EC%97%B4%EA%B3%BC%20%EB%A9%94%EC%84%9C%EB%93%9C.md)
+- [배열과 메서드](./알고리즘/자바스크립트-배열과-메서드.md)
   - splice, slice, concat, forEach, indexOf, includes, find, filter, map, sort, reverse, split, join
-- [맵과 셋](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/-%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20%EB%A7%B5%EA%B3%BC%20%EC%85%8B.md)
+- [맵과 셋](./알고리즘/자바스크립트-맵과-셋.md)
   - 맵, 맵의 요소에 반복작업, 객체를 맵, 맵을 객체, 셋, 셋의 요소에 반복작업
 
 
@@ -42,7 +42,7 @@
   2. 자연수로 된 배열의 부분 연속합이 k인 경우의 수
 - [구간 합 배열](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/-%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/%EA%B5%AC%EA%B0%84%ED%95%A9%20%EB%B0%B0%EC%97%B4.md)
   - N개의 원소로 이루어진 배열의 합
-- [Kadane's algorithm](/트리1.md) 
+- [Kadane's algorithm](/트리1.md)
 ### 트리
 
 - [트리 1](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/-%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/%ED%8A%B8%EB%A6%AC1.md)

@@ -42,7 +42,7 @@
   2. 자연수로 된 배열의 부분 연속합이 k인 경우의 수
 - [구간 합 배열](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/-%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/%EA%B5%AC%EA%B0%84%ED%95%A9%20%EB%B0%B0%EC%97%B4.md)
   - N개의 원소로 이루어진 배열의 합
-- [Kadane's algorithm](/트리1.md)
+- [Kadane's algorithm](./트리1.md)
 ### 트리
 
 - [트리 1](https://github.com/Park-Seung-Hun/Algorithm-Problem/blob/main/-%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%A0%95%EB%A6%AC/%ED%8A%B8%EB%A6%AC1.md)

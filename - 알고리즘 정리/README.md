@@ -12,7 +12,7 @@
   - 따옴표, 문자열 프로퍼티, 문자열 불변성, 대소문자 변경하기, 부분 문자열 찾기, 부분 문자열 추출하기, 문자열
 - [배열](./알고리즘/자바스크립트-배열.md)
   - 배열 선언, pop push shift unshift, 반복문(일반, for of, for in), 다차원 배열, toString
-- [배열과 메서드](./알고리즘/자바스크립트-배열과-메서드.md)
+- [배열과 메서드](- 알고리즘 정리\알고리즘\자바스크립트 배열과 메서드.md)
   - splice, slice, concat, forEach, indexOf, includes, find, filter, map, sort, reverse, split, join
 - [맵과 셋](./알고리즘/자바스크립트-맵과-셋.md)
   - 맵, 맵의 요소에 반복작업, 객체를 맵, 맵을 객체, 셋, 셋의 요소에 반복작업

@@ -26,6 +26,9 @@ console.log(vale.toString(3)); // 11110 => 10진법 수를 해당 진법 문자�
 7. `String.fromCharCode(아스키 코드)` => 아스키 코드를 문자로 바꿔준다.
 8. 문자열 뒤에 문자열 추가: `str+= str1;`, 앞에 문자열 추가: `str = str1 + str; `
 9. 모든 문자 대문자 `str.toUpperCase()`, 소문자 `str.toLowerCase()`
+10. `num = str.split(/[^0-9]/)`: 문자열에서 숫자만 추출
+11. `sub_str = str.split(/[0-9]/).filter(function(a) {if(a!=='') return a})`: 문자열에서 숫자를 제외한 나머지 추출
+12. `str=" 안녕 하세요 ", str.split(' ')=['','안녕'','하세요','']`: 문제 프로그래머스 Lv.2 JadenCase 문자열 만들기 참고.
 
 [위로 가기](#목차)
 
@@ -267,9 +270,9 @@ const dfs = function(str,tg,cnt){
 ### 다익스트라
 
 ```js
-    /* 최소 거리 정보를 저장하는 Dist */	
+    /* 최소 거리 정보를 저장하는 Dist */
     let Dist = new Array(N+1).fill(987654321);
-    
+
     /* 연결된 거리 정보를 저장하는 vertex와 초기화*/
     let vertex = new Array(N+1).fill(null).map(()=>new Array());
     for(i=0;i<road.length;i++){
@@ -278,8 +281,8 @@ const dfs = function(str,tg,cnt){
         vertex[arr[0]].push([arr[1], arr[2]]);
         vertex[arr[1]].push([arr[0], arr[2]]);
     }
-    
-    
+
+
     /* 우선순위 큐를 이용한 Dijkstra */
     const Dijkstra = function (start){
         let pq = [];
@@ -290,15 +293,15 @@ const dfs = function(str,tg,cnt){
             arr = pq.shift();
             let cost = arr[1];
             let cur = arr[0];
-            
+
             for(i=0;i<vertex[cur].length;i++){
                 arr = vertex[cur][i];
                 let ncost = arr[1];
                 let next = arr[0];
-                
+
                 if(Dist[next]>cost+ncost){
                     Dist[next]=cost+ncost;
-                    
+
                     pq.push([next,Dist[next]]);
                     pq.sort(function(a,b){
                         if(a[1]<b[1]) return -1;
@@ -309,7 +312,7 @@ const dfs = function(str,tg,cnt){
             }
         }
     }
-    
+
     Dijkstra(1);
 ```
 

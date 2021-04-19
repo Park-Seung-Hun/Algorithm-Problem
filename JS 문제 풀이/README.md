@@ -267,50 +267,50 @@ const dfs = function(str,tg,cnt){
 ### 다익스트라
 
 ```js
+    /* 최소 거리 정보를 저장하는 Dist */	
+    let Dist = new Array(N+1).fill(987654321);
+    
+    /* 연결된 거리 정보를 저장하는 vertex와 초기화*/
+    let vertex = new Array(N+1).fill(null).map(()=>new Array());
+    for(i=0;i<road.length;i++){
+        arr=road[i];
+        console.log(arr);
+        vertex[arr[0]].push([arr[1], arr[2]]);
+        vertex[arr[1]].push([arr[0], arr[2]]);
+    }
+    
+    
+    /* 우선순위 큐를 이용한 Dijkstra */
+    const Dijkstra = function (start){
+        let pq = [];
+        pq.push([start,0]);
+        Dist[start]=0;
 
-// vertex를 만들기 위한 2차원 배열
-let vertex = new Array(n+1);
-for(let i=0;i<=n;i++) vertex[i]=[];
-for(let i=0;i<edge.length;i++){
-    let from = edge[i][0];
-    let to = edge[i][1];
-
-    vertex[from].push(to);
-    vertex[to].push(from);
-}
-
-// 다익스트라 => 우선순위 큐를 이용하여 동작한다.
-let Dist = Array.from({length:n+1},()=> 987654321);
-const Dijkstra = function(start){
-    let pq = [];
-    pq.push([1,start]);
-    Dist[start]=0;
-
-    while(pq.length!==0){
-        let pq_tmp=pq.shift()
-        let cost = pq_tmp[0];
-        let cur = pq_tmp[1];
-
-        if(cost>max) max=cost;
-
-        for(let i=0;i<vertex[cur].length;i++){
-            let next = vertex[cur][i];
-            let ncost = 1;
-
-            if(Dist[next]>cost+ncost){
-                Dist[next] = cost+ncost;
-                pq.push([Dist[next],next]);
-                pq.sort(function (a,b){
-                    if(a[0]<b[0]) return -1;
-                    if(a[0]===b[0]) return 0;
-                    if(a[0]>b[0]) return 1;
-                });
+        while(pq.length !== 0){
+            arr = pq.shift();
+            let cost = arr[1];
+            let cur = arr[0];
+            
+            for(i=0;i<vertex[cur].length;i++){
+                arr = vertex[cur][i];
+                let ncost = arr[1];
+                let next = arr[0];
+                
+                if(Dist[next]>cost+ncost){
+                    Dist[next]=cost+ncost;
+                    
+                    pq.push([next,Dist[next]]);
+                    pq.sort(function(a,b){
+                        if(a[1]<b[1]) return -1;
+                        if(a[1]===b[1]) return 0;
+                        if(a[1]>b[1]) return 1;
+                    })
+                }
             }
         }
     }
-}
-
-Dijkstra(1);
+    
+    Dijkstra(1);
 ```
 
 [위로 가기](#목차)

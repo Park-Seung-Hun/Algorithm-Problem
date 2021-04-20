@@ -40,10 +40,23 @@ console.log(vale.toString(3)); // 11110 => 10진법 수를 해당 진법 문자�
 4. `arr.filter(fuction)`: 메서드는 주어진 함수의 테스트를 통과하는 모든 요소를 모아 새로운 배열을 반환
 5. 2차원 배열을 취급할 땐 조건문에 바로 값을 넣지 말자!!(ex) 프린터)
 6. 배열 초기화
-```node
-Array.from({length : 길이}, ()=> 원하는 값 ) => 배열을 원하는 값으로 초기
+```js
+Array.from({length : 길이}, ()=> 원하는 값 ); => 배열을 원하는 값으로 초기
 Array.from({length: 5}, (undefined, i) => i); => i(index) 1씩 증가
+new Array(길이).fill(원하는 값); => 1차원 배열 선언 및 초기화
+new Array(길이).fill(null).map(()=>new Array(길이).fill(원하는 값)); => 2차원배열 선언 및 초기화
 ```
+
+7. 빈 배열인지 확인하는 함수
+```js
+function isEmptyArr(arr)  {
+  if(Array.isArray(arr) && arr.length === 0)  {
+    return true;
+  }
+  return false;
+}
+```
+
 7. 배열의 정렬함수
 
 ```
@@ -53,6 +66,7 @@ Array.from({length: 5}, (undefined, i) => i); => i(index) 1씩 증가
 이 함수가 리턴하는 값이 0보다 클 경우, b가 a보다 앞에 오도록 정렬합니다.
 만약 0을 리턴하면, a와 b의 순서를 변경하지 않습니다.
 ```
+
 - 정렬함수 `오름차순`
 
 ```js

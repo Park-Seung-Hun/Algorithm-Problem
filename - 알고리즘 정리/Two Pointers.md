@@ -11,7 +11,7 @@ Two Pointers(투 포인터)
 > 배열 A={1,2,8,9} , 배열 B={-3,3,4,5,11} 을 하나의 배열C 로 합치는 예시.
 
 1. A[i]와 B[j]중 작은 값을 찾아 넣는다. (i=0,j=0)
-2. 작은 값이 B[0]이므로 j의 값을 1 증가 시킨다. (포인터 이동 i=0,j=1, C={-3}) 
+2. 작은 값이 B[0]이므로 j의 값을 1 증가 시킨다. (포인터 이동 i=0,j=1, C={-3})
 3. 다시 A[i]와 B[j]중 작은 값을 찾아 넣고 작은 값이 포함된 배열의 포인터를 1 증가 시킨다.
 4. 3번을 반복하다 보면 포인터가 배열의 크기를 넘어가게 되는데, 이때 해당 배열을 제외한 나머지 배열에서 포인터를 이동시키며 값을 넣는다.
 <br>
@@ -49,7 +49,7 @@ int main() {
 }
 /*
 input:
-4 배열 A 
+4 배열 A
 1 2 8 9 A의 원소
 5 배열 B
 -3 3 4 5 11 B의 원소
@@ -62,8 +62,8 @@ output:
 
 - 투 포인터의 동작2 <br>
  - `어떤 자연수만 있는 배열의 부분 연속합이 k인 경우의 수를 찾는 경우.`<br>
- > SUM[L,R]: 배열의 L부터 R-1까지의 합 
- 
+ > SUM[L,R]: 배열의 L부터 R-1까지의 합
+
 1. SUM[L, R] < k 일 때, R을 증가시켜주어 k에 근접할 수 있도록 범위를 넓혀준다.
 2. SUM[L, R] > k 일 때, L을 증가시켜주어 범위를 좁혀준다.
 3. SUM[L, R] == k 일 때는 정답을 카운트해주며 다음 경우를 찾기 위해 다시 L을 증가시켜주어 범위를 좁혀준다.
@@ -105,4 +105,44 @@ output:
 3 부분 연속합의 값이 k인 경우의 수
 */
 ```
+
+- 투 포인터의 동작3 <br>
+- `중복된 문자 없이 가장 긴 부분 문자열을 찾는 경우`<br>
+
+
+##### 3번 Code
+
+```js
+var lengthOfLongestSubstring = function (s) {
+    let left =0 ,right = 0;
+    let check = [];
+
+    let ans = 0;
+    while (left < s.length && right < s.length) {
+
+        // check배열에 문자 s[right]가 포함 되어 있는 경우
+        while (check.includes(s[right])) {
+
+            // check배열에서 가장 왼쪽에 배치된 문자 s[left]를 제거하고 왼쪽 값을 증가
+            check.splice(check.indexOf(s[left]), 1);
+            left++;
+        }
+
+        // check배열에 문자열의 문자를 넣는다.
+        check.push(s[right]);
+        right++;
+        ans = Math.max(ans, right - left);
+    }
+    return ans;
+}
+
+
+/*
+input: s = "abcabcbb"
+output: 3
+
+check = [a],[a,b],[a,b,c],[b,c,a].....
+*/
+```
+
 참고 사이트 : [코드그라운드 노트](https://www.codeground.org/common/popCodegroundNote), [Rise 마법의 슈퍼마리오 블로그](https://m.blog.naver.com/kks227/220796963742)

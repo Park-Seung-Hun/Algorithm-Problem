@@ -59,6 +59,7 @@
 - <a href="./Two Pointers.md" target="_blank">투 포인터</a>
   1. 정렬된 두 배열을 하나로 합치는 경우
   2. 자연수로 된 배열의 부분 연속합이 k인 경우의 수
+  3. 중복된 문자 없이 가장 긴 부분 문자열을 찾는 경우
 
 
 - <a href="./구간합 배열.md" target="_blank">구간합 배열</a>
@@ -115,6 +116,7 @@
 ### 다이나믹 프로그래밍
 
 - <a href="./Dynamic Programming.md" target="_blank">다이나믹 프로그래밍 개요</a>
+  - 가장 긴 Palindromic 부분 문자열(릿코드 Medium)
 - <a href="./DP Example1.md" target="_blank">DP 예제 1: 배낭문제</a>
 - <a href="./DP Example2.md" target="_blank">DP 예제 2: LCS(최장 공통 부분수열)</a>
 - <a href="./DP Example3.md" target="_blank">DP 예제 3: LIS(최장 증가 부분수열)</a>

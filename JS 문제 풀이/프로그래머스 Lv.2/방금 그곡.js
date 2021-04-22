@@ -3,6 +3,7 @@ function solution(m, musicinfos) {
     let checkTime=0;
     /* 음악 제목, 재생이 시직되고 끝난 시각, 악보 */
     /* C, C#, D, D#, E, F, F#, G, G#, A, A#, B */
+    /* 각 음은 1분에 1개 음악길이 > 재생시간 : 처음부터 반복해서 재생 , 음악길이 < 재생시간 : 처음부터 재생시간 만큼 재생*/
     const changeMusic = function(str){
         let stack = [];
         let arr = str.split('');

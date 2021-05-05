@@ -8,6 +8,7 @@
   - [BFS](#BFS)
   - [DFS](#DFS)
   - [다익스트라](#다익스트라)
+  - [플로이드 와샬](#플로이드-와샬)
   - [GCD LCM](#GCD-LCM)
 
 1. includes(item): item이 존재하는지 안하는지 확인한다.
@@ -329,6 +330,39 @@ const dfs = function(str,tg,cnt){
 
     Dijkstra(1);
 ```
+
+[위로 가기](#목차)
+
+### 플로이드 와샬
+
+```js
+// 노드 사이의 거리를 위한 vertex배열 생성.
+let vertex = new Array(n+1).fill(null).map(()=>new Array(n+1).fill(987654321));
+
+// 거리 초기화.
+for(i=0;i<fares.length;i++){
+    arr=fares[i];
+    vertex[arr[0]][arr[1]] = arr[2];
+    vertex[arr[1]][arr[0]] = arr[2];
+}
+for(i=0;i<=n;i++) vertex[i][i]=0; // 자기 자신한테는 0
+
+// 플로이드 와샬 알고리즘
+const floyd_warwhall = function(){
+    for(let k=1;k<=n;k++){
+        for(let i=1;i<=n;i++){
+            for(let j=1;j<=n;j++){
+                if(vertex[i][k]===987654321||vertex[k][j]===987654321) continue;
+
+                if(vertex[i][j]>vertex[i][k]+vertex[k][j]) vertex[i][j]=vertex[i][k]+vertex[k][j];
+            }
+        }
+    }
+
+}
+floyd_warwhall();
+```
+
 
 [위로 가기](#목차)
 

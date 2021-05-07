@@ -12,8 +12,8 @@
   - [GCD LCM](#GCD-LCM)
 
 
-##### includes(), indexOf() - 문자열 & 배
-: 배열 및 문자열에서 사용 가능하다.
+#### `includes()` `indexOf()` - 문자열 & 배열
+=> 배열 및 문자열에서 사용 가능하다.
 
 ```js
 let arr = [1,2,3,4,5]
@@ -26,41 +26,124 @@ console.log(str.includes('a')); // true
 console.log(str.indexOf('c')); // 2
 ```
 
+## 문자열
+### 요약
+- `str.split('')` : 문자열을 나눠 배열로 만든다.
+- `parseInt(str,진법)` : 해당 진법으로 표현된 문자열을 10진법으로 만든다.
+- `num.toString(진법)` : 10진법 숫자를 해당 진법의 문자열로 변환
+- `str.substr(시작 idx, 길이)` : 시작 인덱스에서 길이만큼 반환
+- `str.slice(시작 idx, 종료 idx)` : 시작 idx에서 종료 idx까지의 문자열 반환
+- `str.split(/[^0-9]/).filter((a)=> a!=='')` : 문자열에서 숫자 추출
+- `str.split(/[0-9]/).filter((a)=> a!=='')` : 문자열에서 문자만 추출
+- `str.toLowerCase()` `str.toUpperCase()` : 소문자, 대문자 
+- `str.charCodeAt(idx)` : 해당 idx의 아스키 코드
+- `String.fromCharCode(아스키 코드)` : 아스키 코드를 문자로 변환
+- `문자열 추가` : 문자열+문자열, str.concat(문자열);
+- `str.length` : 문자열의 길이 반환
 
+[위로 가기](#목차)
 
-### 문자열
-1. `str.split('')`
+### 문자열 
+#### `str.split('')`
 => 문자열을 나눠 배열로 만든다.
 
 ```js
 let str = "abcde"
-
 console.log(str.split('')); // ["a", "b", "c", "d", "e"]
 
 ```
 
-2. `parseInt(str, 진법)` => 해당 진법으로 표현된 문자열을 10진법으로 만든다.
+#### `parseInt(str, 진법)` 
+=> 해당 진법으로 표현된 문자열을 10진법으로 만든다.
 
 ```js
 let num = "100"
-
 console.log(parseInt(num,3)); // 9 => 3진법 표현
 ```
 
-3. `toString(진법)`
+#### `toString(진법)`
+=> 10진법 숫자를 해당 문자열로 만든다.
+
 ```node
 let value = 120;
-console.log(vale.toString(3)); // 11110 => 10진법 수를 해당 진법 문자열로 만든다.
+console.log(value.toString(3)); // 11110 
 ```
-4. `str.substr(시작 지점,길이`): 시작 지점에서 길이만큼 반환
-5. `str.slice(시작 지점,끝나는 지점)`: 시작 지점에서 끝
-6. `str.charCodeAt(idx)` => 문자열에서 idx에 있는 문자의 아스키 코드 출력
-7. `String.fromCharCode(아스키 코드)` => 아스키 코드를 문자로 바꿔준다.
-8. 문자열 뒤에 문자열 추가: `str+= str1;`, 앞에 문자열 추가: `str = str1 + str; `
-9. 모든 문자 대문자 `str.toUpperCase()`, 소문자 `str.toLowerCase()`
-10. `num = str.split(/[^0-9]/)`: 문자열에서 숫자만 추출
-11. `sub_str = str.split(/[0-9]/).filter(function(a) {if(a!=='') return a})`: 문자열에서 숫자를 제외한 나머지 추출
-12. `str=" 안녕 하세요 ", str.split(' ')=['','안녕'','하세요','']`: 문제 프로그래머스 Lv.2 JadenCase 문자열 만들기 참고.
+
+#### `str.substr(시작 idx,길이)`
+=> 시작 지점에서 길이만큼 반환
+
+```js
+let str = "abcdefg"
+console.log(str.substr(2,2)); // cd
+```
+
+#### `str.slice(시작 idx, 종료 idx)`
+=> 시작 idx에서 종료 idx까지의 문자열 반환
+
+```js
+let str = "abcdefg"
+console.log(str.slice(1,4)); // bcd
+console.log(str); // abcdefg 문자열이 변하지 않는다.
+```
+
+#### str.split(/[^0-9]/).filter((a)=> a!=='')
+=> 문자열에서 숫자만 추출
+
+```js
+let str = "92scc2awe3"
+console.log(str.split(/[^0-9]/).filter((a)=> a!=='')); // ["92","2","3"]
+```
+
+#### str.split(/[0-9]/).filter((a)=> a!=='')
+=> 문자열에서 문자만 추출
+
+```js 
+let str = "92scc2awe3"
+console.log(str.split(/[0-9]/).filter((a)=> a!=='')); // ["scc","awe"]
+```
+
+#### `toLowerCase()` `toUpperCase()`
+=> 문자열 소문자 대문자 전환
+
+```js
+let str = "AbCdEfG"
+console.log(str.toLowerCase()); // "abcdefg"
+console.log(str.toUpperCase()); // "ABCDEFG"
+```
+
+#### str.charCodeAt(idx)
+=> 문자열에서 idx에 있는 문자의 아스키 코드
+
+```js
+let str = "abcABC"
+console.log(str.charCodeAt(0),str.charCodeAt(3)) // a:97 A:65
+```
+
+#### String.fromCharCode(아스키 코드)
+=> 아스키 코드를 문자로 바꿔준다.
+
+```js
+console.log(String.fromCharCode(65),String.fromCharCode(99)); // A c
+```
+
+#### 문자열 추가
+
+```js
+let str = "abc";
+let str1 = "ABC";
+// 문자열 추가
+console.log(str+str1); // abcABC
+console.log(str1+str); // ABCabc
+console.log(str.concat(str1)) // abcABC
+```
+
+#### str.length
+=> 문자열 길이 출력
+
+```js
+let str = "abcde";
+console.log(str.length); // 5
+```
 
 [위로 가기](#목차)
 

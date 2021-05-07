@@ -11,11 +11,42 @@
   - [플로이드 와샬](#플로이드-와샬)
   - [GCD LCM](#GCD-LCM)
 
-1. includes(item): item이 존재하는지 안하는지 확인한다.
+
+##### includes(), indexOf() - 문자열 & 배
+: 배열 및 문자열에서 사용 가능하다.
+
+```js
+let arr = [1,2,3,4,5]
+let str = "abcde"
+
+console.log(arr.includes(1)); // true
+console.log(arr.indexOf(3)); // 2
+
+console.log(str.includes('a')); // true
+console.log(str.indexOf('c')); // 2
+```
+
+
 
 ### 문자열
-1. `str.split('')` => 문자열을 나눠 배열로 만든다.
+1. `str.split('')`
+=> 문자열을 나눠 배열로 만든다.
+
+```js
+let str = "abcde"
+
+console.log(str.split('')); // ["a", "b", "c", "d", "e"]
+
+```
+
 2. `parseInt(str, 진법)` => 해당 진법으로 표현된 문자열을 10진법으로 만든다.
+
+```js
+let num = "100"
+
+console.log(parseInt(num,3)); // 9 => 3진법 표현
+```
+
 3. `toString(진법)`
 ```node
 let value = 120;

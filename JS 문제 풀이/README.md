@@ -41,213 +41,39 @@ console.log(str.indexOf('c')); // 2
 - `문자열 추가` : 문자열+문자열, str.concat(문자열);
 - `str.length` : 문자열의 길이 반환
 
+[더 보러 가기](https://lktprogrammer.tistory.com/124)
 [위로 가기](#목차)
 
-### 문자열 
-#### `str.split('')`
-=> 문자열을 나눠 배열로 만든다.
+## 배열
+### 요약
 
+- `배열 초기화` : Array.from(), new Array(길이).fill(초기값)
+- `Array.isArray(arr)` : 배열인지 확인 
+- `Math.max.apply(null,arr)` : 배열의 최대 값 (길이가 10^7 이상인 경우 reduce() 사용)
+- `Math.min.apply(null,arr)` : 배열의 최소 값 (길이가 10^7 이상인 경우 reduce() 사용)
+- `배열의 합계, 평균` 
 ```js
-let str = "abcde"
-console.log(str.split('')); // ["a", "b", "c", "d", "e"]
-
-```
-
-#### `parseInt(str, 진법)` 
-=> 해당 진법으로 표현된 문자열을 10진법으로 만든다.
-
-```js
-let num = "100"
-console.log(parseInt(num,3)); // 9 => 3진법 표현
-```
-
-#### `toString(진법)`
-=> 10진법 숫자를 해당 문자열로 만든다.
-
-```node
-let value = 120;
-console.log(value.toString(3)); // 11110 
-```
-
-#### `str.substr(시작 idx,길이)`
-=> 시작 지점에서 길이만큼 반환
-
-```js
-let str = "abcdefg"
-console.log(str.substr(2,2)); // cd
-```
-
-#### `str.slice(시작 idx, 종료 idx)`
-=> 시작 idx에서 종료 idx까지의 문자열 반환
-
-```js
-let str = "abcdefg"
-console.log(str.slice(1,4)); // bcd
-console.log(str); // abcdefg 문자열이 변하지 않는다.
-```
-
-#### str.split(/[^0-9]/).filter((a)=> a!=='')
-=> 문자열에서 숫자만 추출
-
-```js
-let str = "92scc2awe3"
-console.log(str.split(/[^0-9]/).filter((a)=> a!=='')); // ["92","2","3"]
-```
-
-#### str.split(/[0-9]/).filter((a)=> a!=='')
-=> 문자열에서 문자만 추출
-
-```js 
-let str = "92scc2awe3"
-console.log(str.split(/[0-9]/).filter((a)=> a!=='')); // ["scc","awe"]
-```
-
-#### `toLowerCase()` `toUpperCase()`
-=> 문자열 소문자 대문자 전환
-
-```js
-let str = "AbCdEfG"
-console.log(str.toLowerCase()); // "abcdefg"
-console.log(str.toUpperCase()); // "ABCDEFG"
-```
-
-#### str.charCodeAt(idx)
-=> 문자열에서 idx에 있는 문자의 아스키 코드
-
-```js
-let str = "abcABC"
-console.log(str.charCodeAt(0),str.charCodeAt(3)) // a:97 A:65
-```
-
-#### String.fromCharCode(아스키 코드)
-=> 아스키 코드를 문자로 바꿔준다.
-
-```js
-console.log(String.fromCharCode(65),String.fromCharCode(99)); // A c
-```
-
-#### 문자열 추가
-
-```js
-let str = "abc";
-let str1 = "ABC";
-// 문자열 추가
-console.log(str+str1); // abcABC
-console.log(str1+str); // ABCabc
-console.log(str.concat(str1)) // abcABC
-```
-
-#### str.length
-=> 문자열 길이 출력
-
-```js
-let str = "abcde";
-console.log(str.length); // 5
-```
-
-[위로 가기](#목차)
-
-
-### 배열
-1. `arr.reverse()` => 배열을 뒤집은 배열로 만든다.
-2. `arr.join('')` => 배열을 각 요소마다 합쳐 문자열로 만든다.
-3. `arr.map(변수 => 변수 조건)` => map 내부에 String, Number을 넣으면 배열 요소들이 해당 Type으로 변환.(문자열 배열 -> 숫자 배열)
-4. `arr.filter(fuction)`: 메서드는 주어진 함수의 테스트를 통과하는 모든 요소를 모아 새로운 배열을 반환
-5. 2차원 배열을 취급할 땐 조건문에 바로 값을 넣지 말자!!(ex) 프린터)
-6. 배열 초기화
-```js
-Array.from({length : 길이}, ()=> 원하는 값 ); => 배열을 원하는 값으로 초기
-Array.from({length: 5}, (undefined, i) => i); => i(index) 1씩 증가
-new Array(길이).fill(원하는 값); => 1차원 배열 선언 및 초기화
-new Array(길이).fill(null).map(()=>new Array(길이).fill(원하는 값)); => 2차원배열 선언 및 초기화
-```
-
-7. 빈 배열인지 확인하는 함수
-```js
-function isEmptyArr(arr)  {
-  if(Array.isArray(arr) && arr.length === 0)  {
-    return true;
-  }
-  return false;
-}
-```
-
-7. 배열의 정렬함수
-
-```
-정렬 함수 Tip.
-이 함수가 a, b 두개의 element를 파라미터로 입력받을 경우,
-이 함수가 리턴하는 값이 0보다 작을 경우,  a가 b보다 앞에 오도록 정렬하고,
-이 함수가 리턴하는 값이 0보다 클 경우, b가 a보다 앞에 오도록 정렬합니다.
-만약 0을 리턴하면, a와 b의 순서를 변경하지 않습니다.
-```
-
-- 정렬함수 `오름차순`
-
-```js
-function compareNum(a,b){
-    if(a<b) return -1;
-    if(a===b)return 0;
-    if(a>b)return 1;
-}
-```
-
-- 정렬함수 `내림차순`
-
-```js
-function compare(a,b){
-    if(a<b) return 1;
-    if(a==b)return 0;
-    if(a>b) return -1;
-}
-```
-- `문자열 정렬함수`
-
-```js
-if(f===s) return (a>b) - (a<b) => a>b이면 1 , a<b이면 -1 반환
-else return (f>s) - (f<s); => 마찬가지로 f>s이면 1, f<s이면 -1 반환 (일반 정렬과 같다.)
-```
-
-8. 배열의 최대 최소
-- 배열의 `최대 값`
-
-```js
-Math.max.apply(null,arr)
-
-// 배열의 크기가 ~10^7 이상이 될 경우
-var max = array.reduce( function (previous, current) {
-	return previous > current ? previous:current;
-});
-```
-
-- 배열의 `최소 값`
-
-```js
- Math.min.apply(null,arr)
-
-// 배열의 크기가 ~10^7 이상이 될 경우
-var min = array.reduce( function (previous, current) {
-	return previous > current ? current:previous;
-});
-```
-
-9. 배열의 합계 평균
-
-```js
-// 배열의 합계
 const sum = arr.reduce(function add(sum, currValue) {
       return sum + currValue;
 }, 0);
 
-// 배열의 평균
 const average = sum / arr.length;
-
 ```
+- `arr.join('')` : 배열의 각 요소를 ''로 합쳐 문자열로 반환
+- `arr.map(함수)` : 배열의 각 원소별로 지정된 함수를 실행한 결과로 구성된 새로운 배열을 반환한다. => 조건에 맞는 boolean 반환
+- `arr.filter(함수)` : 지정된 함수의 결과 값을 true로 만드는 원소들로만 구성된 별도의 배열을 반환한다. => 배열의 원소 반환
+- `arr.forEach(function (value){})` : 배열의 각 요소별로 지정된 함수를 실행한다. 
+- `arr.pop()` `arr.push()` : 배열 뒤에 요소를 삭제 후 반환 / 삽입
+- `arr.shift()` `arr.unshift()`: 배열 앞에 요소를 삭제 후 반환/ 삽입
+- `arr.splice(시작 idx, 길이, 추가할 요소)` : 시작 idx 부터 길이만큼 삭제 => 추가도 가능 (배열 자체가 변환)
+- `arr.slice(시작 idx, 종료 idx)` : 시작 idx부터 종료 idx까지 새로운 배열 반환 (배열 변화 x)
+- `arr.concat(arr1)` : 배열을 병합하여 반환
+- `arr.reverse()` : 배열 뒤집기
+- `arr.sort()` : 배열의 원소를 알파벳순으로, 또는 지정된 함수에 따른 순서로 정렬한다. (모든 원소를 문자열로 취급해 사전적으로 정렬)
 
+[더 보러 가기](http://blog.302chanwoo.com/2017/08/javascript-array-method/)
 
 [위로 가기](#목차)
-
-
 
 ### 우선순위 큐
 ```js

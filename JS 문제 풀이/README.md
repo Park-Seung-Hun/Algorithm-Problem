@@ -6,14 +6,14 @@
   - [Map](#Map)
   - [Set](#Set)
   - [우선순위큐](#우선순위-큐)
-  - [GCD LCM](#GCD-LCM)
   - [순열과 조합](#순열과-조합)
   - [소수 찾기](#소수-찾기)
   - [BFS](#BFS)
   - [DFS](#DFS)
   - [다익스트라](#다익스트라)
   - [플로이드 와샬](#플로이드-와샬)
-
+  - [이진트리](#이진트리)
+  - [GCD LCM](#GCD-LCM)
 
 
 #### `includes()` `indexOf()` - 문자열 & 배열
@@ -120,6 +120,9 @@ O.key=value;
 - `map.delete(key)` : key를 제거
 - `map.clear()` : 맵의 모든 것을 제거
 - `map.size` : 현재 요소의 개수를 리턴
+- `map.keys().next().value` : map의 key 중 가장 처음 값 (한번 더 출력시 그 다음 값)
+- `map.values().next().value` : map의 value 중 가장 처음 값 (한번 더 출력시 그 다음 값)
+- `map.entries().next().value` : map의 entry 중 가장 처음 값 (한번 더 출력시 그 다음 값)
 - `for..of, forEach로 Map 순회하기`
 
 ```js
@@ -217,21 +220,6 @@ for (let [key, value] of mySet.entries()) console.log(key);
 
 // Set 객체를 배열 객체로 변환 (Array.from으로)
 var myArr = Array.from(mySet); // [1, "some text", {"a": 1, "b": 2}]
-
-mySet2 = new Set([1, 2, 3, 4]);
-mySet2.size; // 4
-[...mySet2]; // [1, 2, 3, 4]
-
-// 교집합은 다음으로 흉내(simulate)낼 수 있음
-var intersection = new Set([...set1].filter(x => set2.has(x)));
-
-// 차집합은 다음으로 흉내낼 수 있음
-var difference = new Set([...set1].filter(x => !set2.has(x)));
-
-// forEach로 set 항목 반복
-mySet.forEach(function(value) {
-  console.log(value);
-});
 ```
 
 [더 보러 가기](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Set)
@@ -247,24 +235,6 @@ priority_queue.sort(function (a,b){
     // return a-b; : 최소 힙
     // return b-a; : 최대 힙
 });
-```
-
-[위로 가기](#목차)
-
-### GCD LCM
-
-```js
-// 최대 공약수
-const gcd = function(a,b){
-    if(b===0) return a;
-    else return gcd(b,a%b);
-}
-
-// 최소 공배수
-const lcm = function(a,b){
-    let g=gcd(a,b);
-    return g*parseInt(a/g)*parseInt(b/g);
-}
 ```
 
 [위로 가기](#목차)
@@ -485,5 +455,95 @@ const floyd_warwhall = function(){
 floyd_warwhall();
 ```
 
+
+[위로 가기](#목차)
+
+### 이진트리
+=> x,y 값을 이용한 이진트리 만들기
+
+```js
+function solution(nodeinfo) {
+    let rootNode
+    let preorder = []
+    let postorder = []
+
+    /* 노드 값 초기화 */
+    const Node = function (x, y, id) {
+        this.x = x // 위치
+        this.y = y // 높이
+        this.id = id
+        this.left = null
+        this.right = null
+    }
+
+    const _insertNode = (node, x, y, id) => {
+        const side = x < node.x ? 'left' : 'right'
+
+        if (node[side] === null) {
+            /*
+                자식 노드가 존재하지 않는 경우 => 노드 생성 (node.x값보다 작은 경우 left , node.x보다 큰 경우 right)
+            */
+            node[side] = new Node(x, y, id)
+        } else {
+            /*
+                자식 노드가 존재하는 경우 => 자식노드에서 반복
+            */
+            _insertNode(node[side], x, y, id)
+        }
+    }
+
+    /* 노드 입력 */
+    const insertNode = (x, y, id) => {
+
+        if (!rootNode) { // root노드가 없는 경우 => root노드 생성
+            rootNode = new Node(x, y, id)
+        } else { // root노드가 있는 경우 => root노드부터 시작해 노드 삽입
+            _insertNode(rootNode, x, y, id)
+        }
+    }
+
+    /* 전위 순회 root -> 좌 -> 우*/
+    const _preorder = node => {
+        preorder.push(node.id)
+        if (node.left) _preorder(node.left)
+        if (node.right) _preorder(node.right)
+    }
+
+    /* 후위 순회 좌 -> 우 -> root */
+    const _postorder = node => {
+        if (node.left) _postorder(node.left)
+        if (node.right) _postorder(node.right)
+        postorder.push(node.id)
+    }
+
+    /* 노드 값 정리 [x,y,idx] 후 y 값에 대해 내림차순 정렬 */
+    const nodes = nodeinfo.map(([x, y], idx) => [x, y, idx+1]);
+    nodes.sort(([, ya], [, yb]) => yb - ya)
+
+    /* 정리된 노드 값을 이진 트리로 만들기 */
+    nodes.forEach(([x, y, id]) => insertNode(x, y, id))
+
+    _preorder(rootNode)
+    _postorder(rootNode)
+
+    return [preorder, postorder]
+}
+```
+
+### GCD LCM
+
+```js
+// 최대 공약수
+const gcd = function(a,b){
+    if(b===0) return a;
+    else return gcd(b,a%b);
+}
+
+// 최소 공배수
+const lcm = function(a,b){
+    let g=gcd(a,b);
+    return g*parseInt(a/g)*parseInt(b/g);
+}
+```
 
 [위로 가기](#목차)

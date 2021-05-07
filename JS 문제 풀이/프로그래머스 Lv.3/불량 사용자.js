@@ -28,7 +28,7 @@ function solution(user_id, banned_id) {
         ans.push(tmp);
     }
 
-    // backTracking 을 통해 경우의 수를 찾는다.
+    // backTracking 을 통해 제재 아이디들의 경우의 수를 찾는다.
     let save = [];
     let check = {};
     const backTracking = function(len){

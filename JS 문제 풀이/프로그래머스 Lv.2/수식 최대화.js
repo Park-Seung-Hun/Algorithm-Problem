@@ -2,72 +2,65 @@ function solution(expression) {
     let answer = 0;
     let op = [];
 
+    /* 수식이 존재하는지 찾기 */
     if(expression.includes('+')) op.push('+');
     if(expression.includes('-')) op.push('-');
     if(expression.includes('*')) op.push('*');
 
-    let num = expression.split(/[^0-9]/);
-    let tmp = expression.split('').filter(function(a){
-     if(!(a>='0'&&a<='9')) return a
-    });
-
-
+    /* 존재하는 수식 우선순위 정하기 */
     const getPermutations= function (arr, selectNumber) {
       const results = [];
-      if (selectNumber === 1) return arr.map((value) => [value]);
+      if (selectNumber === 1) return arr.map((value) => [value]); // 1개씩 택할 때, 바로 모든 배열의 원소 return
 
       arr.forEach((fixed, index, origin) => {
-        const rest = [...origin.slice(0, index), ...origin.slice(index+1)]
-        const permutations = getPermutations(rest, selectNumber - 1);
-        const attached = permutations.map((permutation) => [fixed, ...permutation]);
-        results.push(...attached);
+        const rest = [...origin.slice(0, index), ...origin.slice(index+1)] // 해당하는 fixed를 제외한 나머지 배열
+        const permutations = getPermutations(rest, selectNumber - 1); // 나머지에 대해 순열을 구한다.
+        const attached = permutations.map((permutation) => [fixed, ...permutation]); // 돌아온 순열에 대해 떼 놓은(fixed) 값 붙이기
+        results.push(...attached); // 배열 spread syntax 로 모두다 push
       });
 
-      return results;
+      return results; // 결과 담긴 results return
     };
 
-    op = getPermutations(op,op.length);
+    let results = getPermutations(op,op.length);
 
-    for(let i=0;i<op.length;i++){ // 연산자 경우의 수 만큼
-        let arr = [...tmp];
-        let cmp = [...num];
+    /* 우선순위에 따라 계산 실시*/
+    for(let result of results){
+        let num = expression.split(/[^0-9]/).map(Number);
+        let ope = expression.split(/[0-9]/).filter(a=> a!=='');
 
-        for(let j=0;j<op[i].length;j++){ // 우선순위 연산자
-            let p = op[i][j];
-            let check = [];
-            let save=[];
+        for(let o of result){
+            /* o = 연산자 */
+            let tmp = [];
+            let tmp_num = [num[0]];
+            let len = ope.length;
 
-            for(let k=0;k<arr.length;k++){ // 식에 있는 연산자
-                let first = parseInt(cmp.shift());
-                let second = parseInt(cmp.shift());
+            for(let i=0;i<len;i++){
+                let ope_t=ope.shift();
+                if(ope_t===o){
+                    let a = tmp_num.pop();
 
-                if(arr[k]===p){
-                    if(p==='+'){
-                        cmp.unshift(String(first+second));
+                    if(o==='+'){
+                        tmp_num.push(a+num[i+1]);
                     }
-                    else if(p==='-'){
-                        cmp.unshift(String(first-second));
+                    if(o==='-'){
+                        tmp_num.push(a-num[i+1]);
                     }
-                    else if(p==='*'){
-                        cmp.unshift(String(first*second));
+                    if(o==='*'){
+                        tmp_num.push(a*num[i+1]);
                     }
-                    check.push(arr[k]);
                 }
-                else {
-                    cmp.unshift(String(second));
-                    save.push(String(first));
+                else{
+                    tmp_num.push(num[i+1]);
+                    tmp.push(ope_t);
                 }
             }
-            while(cmp.length!==0) save.push(cmp.shift());
-            cmp=save;
-            for(let input of check) {
-                let idx = arr.indexOf(input);
-                arr.splice(idx,1);
-            }
+            ope=[...tmp];
+            num=[...tmp_num];
         }
-        let ans = Math.abs(parseInt(cmp[0]));
-        if(answer<ans)answer=ans;
+        if(Math.abs(num[0])>answer) answer = Math.abs(num[0]);
     }
+
     return answer;
 }
 

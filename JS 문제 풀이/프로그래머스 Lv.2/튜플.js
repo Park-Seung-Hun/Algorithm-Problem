@@ -1,31 +1,26 @@
 function solution(s) {
     let answer = [];
-    // 1. s를 길이로 정렬한다.
-    let arr = s.split('}');
-    arr.pop();arr.pop();
+    /* 문자열 s를 구분하기 */
+    let ans = [];
+    for(let i=1;i<s.length-1;i++){
+        let char = s[i];
 
-    for(let i =0;i<arr.length;i++){
-        arr[i]=arr[i].substr(2);
-    }
-    arr = arr.sort(function (a,b){
-        if(a.length < b.length) return -1;
-        if(a.length===b.length) return 0;
-        if(a.length>b.length) return 1;
-    })
-
-    // 2. 각 요소마다 존재하지 않는 요소를 삽입
-    console.log(arr[0].split(','));
-    let map =new Map();
-
-    for(let i=0;i<arr.length;i++){
-        let check = arr[i].split(',');
-        for(let j of check){
-            if(!map.has(j)){
-                map.set(j,true);
-                answer.push(parseInt(j));
-            }
+        if(s[i]==='{'){
+            let idx = s.indexOf('}',i);
+            let arr = s.slice(i+1,idx).split(',');
+            ans.push(arr);
+            i=idx;
         }
     }
 
-    return answer;
+    ans.sort((a,b)=> a.length-b.length);
+    /* ans를 set에 넣기 */
+    let set = new Set();
+    for(let a of ans){
+        for(let b of a){
+            set.add(Number(b));
+        }
+    }
+
+    return [...set];
 }

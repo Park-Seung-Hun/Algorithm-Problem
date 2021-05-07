@@ -2,14 +2,18 @@
 ## 목차
   - [문자열](#문자열)
   - [배열](#배열)
+  - [객체](#Object)
+  - [Map](#Map)
+  - [Set](#Set)
   - [우선순위큐](#우선순위-큐)
+  - [GCD LCM](#GCD-LCM)
   - [순열과 조합](#순열과-조합)
   - [소수 찾기](#소수-찾기)
   - [BFS](#BFS)
   - [DFS](#DFS)
   - [다익스트라](#다익스트라)
   - [플로이드 와샬](#플로이드-와샬)
-  - [GCD LCM](#GCD-LCM)
+
 
 
 #### `includes()` `indexOf()` - 문자열 & 배열
@@ -35,23 +39,25 @@ console.log(str.indexOf('c')); // 2
 - `str.slice(시작 idx, 종료 idx)` : 시작 idx에서 종료 idx까지의 문자열 반환
 - `str.split(/[^0-9]/).filter((a)=> a!=='')` : 문자열에서 숫자 추출
 - `str.split(/[0-9]/).filter((a)=> a!=='')` : 문자열에서 문자만 추출
-- `str.toLowerCase()` `str.toUpperCase()` : 소문자, 대문자 
+- `str.toLowerCase()` `str.toUpperCase()` : 소문자, 대문자
 - `str.charCodeAt(idx)` : 해당 idx의 아스키 코드
 - `String.fromCharCode(아스키 코드)` : 아스키 코드를 문자로 변환
 - `문자열 추가` : 문자열+문자열, str.concat(문자열);
 - `str.length` : 문자열의 길이 반환
 
 [더 보러 가기](https://lktprogrammer.tistory.com/124)
+
 [위로 가기](#목차)
 
 ## 배열
 ### 요약
 
 - `배열 초기화` : Array.from(), new Array(길이).fill(초기값)
-- `Array.isArray(arr)` : 배열인지 확인 
+- `Array.isArray(arr)` : 배열인지 확인
 - `Math.max.apply(null,arr)` : 배열의 최대 값 (길이가 10^7 이상인 경우 reduce() 사용)
 - `Math.min.apply(null,arr)` : 배열의 최소 값 (길이가 10^7 이상인 경우 reduce() 사용)
-- `배열의 합계, 평균` 
+- `배열의 합계, 평균`
+
 ```js
 const sum = arr.reduce(function add(sum, currValue) {
       return sum + currValue;
@@ -59,10 +65,11 @@ const sum = arr.reduce(function add(sum, currValue) {
 
 const average = sum / arr.length;
 ```
+
 - `arr.join('')` : 배열의 각 요소를 ''로 합쳐 문자열로 반환
 - `arr.map(함수)` : 배열의 각 원소별로 지정된 함수를 실행한 결과로 구성된 새로운 배열을 반환한다. => 조건에 맞는 boolean 반환
 - `arr.filter(함수)` : 지정된 함수의 결과 값을 true로 만드는 원소들로만 구성된 별도의 배열을 반환한다. => 배열의 원소 반환
-- `arr.forEach(function (value){})` : 배열의 각 요소별로 지정된 함수를 실행한다. 
+- `arr.forEach(function (value){})` : 배열의 각 요소별로 지정된 함수를 실행한다.
 - `arr.pop()` `arr.push()` : 배열 뒤에 요소를 삭제 후 반환 / 삽입
 - `arr.shift()` `arr.unshift()`: 배열 앞에 요소를 삭제 후 반환/ 삽입
 - `arr.splice(시작 idx, 길이, 추가할 요소)` : 시작 idx 부터 길이만큼 삭제 => 추가도 가능 (배열 자체가 변환)
@@ -76,9 +83,161 @@ const average = sum / arr.length;
 [위로 가기](#목차)
 
 ## Object
+=> Object의 key는 문자열, value는 모든 값이다.
+### 요약
+- `객체 선언 및 프로퍼티 할당`
 
-## Map 
-https://oneroomtable.tistory.com/entry/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EB%A7%B5-Map-%EC%A0%95%EB%A6%AC-%EC%A4%91#0h
+```js
+let O;
+/* 객체 선언 */
+O = new Object();
+O = {};
+
+/* 프로퍼티 할당 */
+O[key]=value;
+O.key=value;
+```
+
+- `Object.keys(객체명)` : 객체의 key를 배열로 반환한다.
+- `Object.values(객체명)` : 객체의 value를 배열로 반환한다.
+- `Object.entries(객체명)` : [key,value] 형식의 배열로 반환한다.
+- `for(let key in Obj)` : 객체의 각각의 키를 반환한다.
+- `key in 객체` : 객체에 key가 존재하면 true, 아니면 false
+
+[더 보러 가기](https://ljtaek2.tistory.com/89)
+
+[위로 가기](#목차)
+
+## Map
+=> Map의 key와 value는 모든 유형이 가능하다. (중복은 안됨, key가 정렬)
+=> Map은 Object와 달리 has가 아주 좋다.
+
+### 요약
+- `new Map()` : 새로운 맵을 생성
+- `map.set(key,value)` : value를 key로 저장
+- `map.get(key)` : key가 존재하면 value, 존재하지 않으면 undefined
+- `map.has(key)` : key가 존재하면 true, 아니면 false
+- `map.delete(key)` : key를 제거
+- `map.clear()` : 맵의 모든 것을 제거
+- `map.size` : 현재 요소의 개수를 리턴
+- `for..of, forEach로 Map 순회하기`
+
+```js
+let myMap = new Map()
+myMap.set(0, 'zero')
+myMap.set(1, 'one')
+
+for (let [key, value] of myMap) {
+  console.log(key + ' = ' + value)
+}
+// 0 = zero
+// 1 = one
+
+for (let key of myMap.keys()) {
+  console.log(key)
+}
+// 0
+// 1
+
+for (let value of myMap.values()) {
+  console.log(value)
+}
+// zero
+// one
+
+for (let [key, value] of myMap.entries()) {
+  console.log(key + ' = ' + value)
+}
+// 0 = zero
+// 1 = one
+
+myMap.forEach(function(value, key) {
+  console.log(key + ' = ' + value)
+})
+// 0 = zero
+// 1 = one
+```
+
+- `배열과 Map의 관계`
+
+```js
+let kvArray = [['key1', 'value1'], ['key2', 'value2']]
+
+// Use the regular Map constructor to transform a 2D key-value Array into a map
+let myMap = new Map(kvArray)
+
+myMap.get('key1') // returns "value1"
+
+// Use Array.from() to transform a map into a 2D key-value Array
+console.log(Array.from(myMap)) // Will show you exactly the same Array as kvArray
+
+// A succinct way to do the same, using the spread syntax
+console.log([...myMap])
+
+// Or use the keys() or values() iterators, and convert them to an array
+console.log(Array.from(myMap.keys())) // ["key1", "key2"]
+```
+
+[더 보러 가기](https://oneroomtable.tistory.com/entry/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EB%A7%B5-Map-%EC%A0%95%EB%A6%AC-%EC%A4%91#0h)
+
+[위로 가기](#목차)
+
+## Set
+=> 자료형에 관계 없이 모두 저장 가능 (중복 x)
+### 요약
+
+- `Set 선언 및 할당`
+
+```js
+let mySet = new Set();
+mySet.add(1);
+mySet.add(5);
+mySet.add(5); // Set {1, 5}
+```
+
+- `set.has(value)` : value가 존재하면 true, 아니면 false
+- `set.size` : set의 길이
+- `set.delete(value)` : value 제거
+- `Set 반복 및 배열과 관계`
+
+```js
+// set 내 항목에 대해 반복
+// 순서대로 항목을 (콘솔에) 기록: 1, "some text", {"a": 1, "b": 2}
+for (let item of mySet) console.log(item);
+
+// 순서대로 항목을 기록: 1, "some text", {"a": 1, "b": 2}
+for (let item of mySet.keys()) console.log(item);
+
+// 순서대로 항목을 기록: 1, "some text", {"a": 1, "b": 2}
+for (let item of mySet.values()) console.log(item);
+
+// 순서대로 항목을 기록: 1, "some text", {"a": 1, "b": 2}
+// (여기서 key와 value는 같음)
+for (let [key, value] of mySet.entries()) console.log(key);
+
+// Set 객체를 배열 객체로 변환 (Array.from으로)
+var myArr = Array.from(mySet); // [1, "some text", {"a": 1, "b": 2}]
+
+mySet2 = new Set([1, 2, 3, 4]);
+mySet2.size; // 4
+[...mySet2]; // [1, 2, 3, 4]
+
+// 교집합은 다음으로 흉내(simulate)낼 수 있음
+var intersection = new Set([...set1].filter(x => set2.has(x)));
+
+// 차집합은 다음으로 흉내낼 수 있음
+var difference = new Set([...set1].filter(x => !set2.has(x)));
+
+// forEach로 set 항목 반복
+mySet.forEach(function(value) {
+  console.log(value);
+});
+```
+
+[더 보러 가기](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Set)
+
+[위로 가기](#목차)
+
 
 ### 우선순위 큐
 ```js
@@ -88,6 +247,24 @@ priority_queue.sort(function (a,b){
     // return a-b; : 최소 힙
     // return b-a; : 최대 힙
 });
+```
+
+[위로 가기](#목차)
+
+### GCD LCM
+
+```js
+// 최대 공약수
+const gcd = function(a,b){
+    if(b===0) return a;
+    else return gcd(b,a%b);
+}
+
+// 최소 공배수
+const lcm = function(a,b){
+    let g=gcd(a,b);
+    return g*parseInt(a/g)*parseInt(b/g);
+}
 ```
 
 [위로 가기](#목차)
@@ -308,23 +485,5 @@ const floyd_warwhall = function(){
 floyd_warwhall();
 ```
 
-
-[위로 가기](#목차)
-
-### GCD LCM
-
-```js
-// 최대 공약수
-const gcd = function(a,b){
-    if(b===0) return a;
-    else return gcd(b,a%b);
-}
-
-// 최소 공배수
-const lcm = function(a,b){
-    let g=gcd(a,b);
-    return g*parseInt(a/g)*parseInt(b/g);
-}
-```
 
 [위로 가기](#목차)

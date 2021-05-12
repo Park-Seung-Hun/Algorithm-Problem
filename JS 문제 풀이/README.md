@@ -1,4 +1,9 @@
 # JavaScript 코딩 테스트 준비
+
+- [JS Event Loop](https://asfirstalways.tistory.com/362)
+- [JS 비동기 처리과정](http://sculove.github.io/blog/2018/01/18/javascriptflow/)
+- [JS Promise Async/Await](https://velog.io/@yejinh/%EB%B9%84%EB%8F%99%EA%B8%B0-%ED%8C%8C%ED%97%A4%EC%B9%98%EA%B8%B0)
+
 ## 목차
   - [문자열](#문자열)
   - [배열](#배열)

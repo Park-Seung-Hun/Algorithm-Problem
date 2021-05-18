@@ -61,6 +61,7 @@ console.log(str.indexOf('c')); // 2
 - `Array.isArray(arr)` : 배열인지 확인
 - `Math.max.apply(null,arr)` : 배열의 최대 값 (길이가 10^7 이상인 경우 reduce() 사용)
 - `Math.min.apply(null,arr)` : 배열의 최소 값 (길이가 10^7 이상인 경우 reduce() 사용)
+- `Array.every(콜백함수(현재원소, 인덱스, 배열), 콜백을 실행할 this)` : Array의 모든 함수가 Callback 함수를 만족하면 true, 아니면 false
 - `배열의 합계, 평균`
 
 ```js

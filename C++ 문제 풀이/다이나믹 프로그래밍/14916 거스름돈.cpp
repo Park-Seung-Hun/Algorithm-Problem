@@ -21,3 +21,8 @@ int main() {
 	cout << ans;
 	return 0;
 }
+
+/*
+  이건 DP가 아니라 그리디 인듯?
+  DP 풀이는 뭐가 있을까?
+*/

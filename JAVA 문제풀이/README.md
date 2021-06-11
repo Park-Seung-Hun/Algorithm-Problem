@@ -2,7 +2,13 @@
 
 ## 목차
   - [Array](#Array)
+  - [ArrayList](#ArrayList)
   - [Stack](#Stack)
+  - [Queue](#Queue)
+  - [PriorityQueue](#PriorityQueue)
+
+### 컬렉션프레임워크
+
 
 ### Array
 > Arrays는 선언 전 `import java.util.Arrays;`를 먼저 선언한다.<br>
@@ -34,17 +40,57 @@ int[][] array = {{1,2,3,4},{5,6,7,8}} // 선언과 초기화
 
 [위로 가기](#목차)
 
+### ArrayList
+> `ArrayList란?` List 인터페이스를 상속받은 클래스로 크기가 가변하는 선형리스트이다.<br>
+> `ArrayList`는 선언 전 `import java.util.ArrayList;`를 선언한다
+
+  - `ArrayList<자료형> num = new ArrayList<>();`
+
+
+
+
 ### Stack
-> Stack은 선언 전 `import java.util.Stack;`를 먼저 선언한다.
+> `Stack`은 선언 전 `import java.util.Stack;`를 먼저 선언한다.
 
   - `Stack<자료형> stack = new Stack<>();`
-    - 자료형 : Integer, String 등
-  - `stack.push(value)` : stack에 값을 집어넣는다.
+  - `stack.push(value)` : stack에 value를 추가한다.
   - `stack.pop()` : stack의 가장 꼭대기 값을 제거한다.
   - `stack.clear()` : stack을 초기화 한다.
   - `stack.peek()` : stack의 가장 상단 값 출력
   - `stack.size()` : stack의 크기 출력
   - `stack.empty()` : stack이 비어 있을 경우 true
   - `stack.contains(value)` : stack에 value가 존재할 경우 true
+
+[위로 가기](#목차)
+
+### Queue
+> `Queue`는 Linked List를 이용해 사용한다.<br>
+> 따라서 선언 전 `import java.util.Queue;`와 `import java.util.LinkedList;`를 먼저 선언한다.
+
+  - `Queue<자료형> queue = new LinkedList<>();`
+  - `queue.add(value)` : queue에 value를 추가한다.
+      - 삽입에 성공하면 true, 실패하면 IllegalStateException을 발생
+  - `queue.offer(value)` : queue에 value를 추가한다.
+  - `queue.poll()` : queue에 첫번째 값을 반환하고 제거 (빈 경우 null)
+  - `queue.remove()` : queue에 첫번째 값 제거
+  - `queue.clear()` : queue 초기화
+  - `queue.peek()` : queue에 가장 첫번째 값 참조
+
+[위로 가기](#목차)
+
+
+### PriorityQueue
+> `우선순위 큐란?` 데이터의 우선순위를 먼저 결정하고 그 우선순위가 높은 엘리먼트가 먼저 나가는 자료구조이다. (Heap을 이용해 구현)<br>
+> Priority queue는 선언 전 `import java.util.PriorityQueue;`를 먼저 선언한다.
+
+  - `PriorityQueue<자료형> pq = new PriorityQueue<>();` : 우선순위 낮은 숫자 순
+  - `PriorityQueue<자료형> pq = new PriorityQueue<>(Collections.reverseOrder());` : 우선순위 높은 숫자 순
+  - `pq.add(value)` : 우선순위큐에 value를 추가한다.
+    - 삽입에 성공하면 true, 실패하면 IllegalStateException을 발생
+  - `pq.offer(value)` :  우선순위큐에 value 추가
+  - `pq.poll()` : 우선순위큐에 첫번째 값을 반환하고 제거 (빈 경우 null)
+  - `pq.remove()` : 첫번째 값 제거
+  - `pq.clear()` : 우선순위큐 초기화
+  - `pq.peek()` : 우선순위큐에 가장 첫번째 값 참조
 
 [위로 가기](#목차)

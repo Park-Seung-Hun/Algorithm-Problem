@@ -1,7 +1,8 @@
 # JAVA 코딩 테스트 준비
 
 ## 목차
-  - [Array](#Array)
+  - [Array](#Array) -> 배열 사용시.
+  - [String](#String)
   - [ArrayList](#ArrayList)
   - [Stack](#Stack)
   - [Queue](#Queue)
@@ -39,6 +40,25 @@ int[][] array = {{1,2,3,4},{5,6,7,8}} // 선언과 초기화
   - `Arrays.fill(배열, value)` : 배열의 전체 원소를 value로 채운다.
 
 [위로 가기](#목차)
+
+
+### String
+
+  - `String str = "선언 및 초기화"`
+  - `str.equals(str2)` : 문자열 비교
+  - `str.length()` : 문자열 길이 반환
+  - `str.isEmpty()` : 문자열 공백 여부 확인
+  - `str.indexOf("문자")` : 해당 문자가 시작되는 인덱스를 반환 (없으면 -1)
+  - `str.substring(시작 idx,(종료 idx))` : 종료 idx를 입력하지 않으면 문자열 끝까지 반환
+  - `str.replaceAll(바뀔 문자열, 바꿀 문자열)` : 문자열에서 전체를 교체해준다.
+  - `str.toUpperCase()` : 문자열을 대문자로 변환
+  - `str.toLowerCase()` : 문자열을 소문자로 변환
+  - `str.trim()` : 문자열 앞뒤 공백 제거
+  - `char[] arr = str.toCharArray()` : 문자를 한글자씩 찢어 char배열로 반환한다.
+  - `String[] arr = str.split(parameter)` : 문자열을 parameter로 찢어 String 배열로 반환한다.
+
+[위로 가기](#목차)
+
 
 ### ArrayList
 > `ArrayList란?` List 인터페이스를 상속받은 클래스로 크기가 가변하는 선형리스트이다.<br>

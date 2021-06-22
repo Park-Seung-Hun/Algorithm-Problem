@@ -1,15 +1,25 @@
 # JAVA 코딩 테스트 준비
 
 ## 목차
-  - [Array](#Array) -> 배열 사용시.
+  - [Math 함수](#Math함수)
+  - [Array](#Array)
   - [String](#String)
-  - [ArrayList](#ArrayList)
-  - [Stack](#Stack)
-  - [Queue](#Queue)
-  - [PriorityQueue](#PriorityQueue)
+  - [컬렉션 프레임워크](#컬렉션프레임워크) : 배열의 크기 불변, 메모리 낭비와 같은 문제점을 해결하는 자료구조
+    - [ArrayList](#ArrayList)
+    - [Stack](#Stack)
+    - [Queue](#Queue)
+    - [PriorityQueue](#PriorityQueue)
 
-### 컬렉션프레임워크
+### Math함수
 
+  - `Math.abs(숫자)` : 절대값
+  - `Math.random()` : 난수 생성 (0.0~1.0)
+  - `Math.min(a,b)` `Math.max(a,b)` : 최대 최소 값
+  - `Math.round(실수)` : 소수점 첫번째 자리에서 반올림한다.
+  - `Math.floor(실수)` : 버림
+  - `Math.ceil(실수)` : 올림
+  - `Math.pow(피연산자, 제곱수)` : 피연산자^제곱수
+  - `Math.sqrt(실수)` : 제곱근
 
 ### Array
 > Arrays는 선언 전 `import java.util.Arrays;`를 먼저 선언한다.<br>
@@ -45,27 +55,60 @@ int[][] array = {{1,2,3,4},{5,6,7,8}} // 선언과 초기화
 ### String
 
   - `String str = "선언 및 초기화"`
-  - `str.equals(str2)` : 문자열 비교
-  - `str.length()` : 문자열 길이 반환
-  - `str.isEmpty()` : 문자열 공백 여부 확인
-  - `str.indexOf("문자")` : 해당 문자가 시작되는 인덱스를 반환 (없으면 -1)
-  - `str.substring(시작 idx,(종료 idx))` : 종료 idx를 입력하지 않으면 문자열 끝까지 반환
-  - `str.replaceAll(바뀔 문자열, 바꿀 문자열)` : 문자열에서 전체를 교체해준다.
-  - `str.toUpperCase()` : 문자열을 대문자로 변환
-  - `str.toLowerCase()` : 문자열을 소문자로 변환
-  - `str.trim()` : 문자열 앞뒤 공백 제거
-  - `char[] arr = str.toCharArray()` : 문자를 한글자씩 찢어 char배열로 반환한다.
-  - `String[] arr = str.split(parameter)` : 문자열을 parameter로 찢어 String 배열로 반환한다.
+  - `문자열 기타`
+    - `str.equals(str2)` : 문자열 비교
+    - `str.length()` : 문자열 길이 반환
+    - `str.isEmpty()` : 문자열 공백 여부 확인
+    - `str.toUpperCase()` : 문자열을 대문자로 변환
+    - `str.toLowerCase()` : 문자열을 소문자로 변환
+    - `str.trim()` : 문자열 앞뒤 공백 제거
+  - `문자열 검색`
+    - `str.indexOf(문자열 or 문자, (시작 idx))` : 해당 문자가 시작되는 인덱스를 반환 (없으면 -1)
+    - `str.contains(문자열)` : 문자가 포함될 경우 true 아니면 false
+    - `str.matches(정규식)` : 정규식을 이용한 검색
+  - `문자열 교체`
+    - `str = str.replace(기존 문자열, 바꿀 문자열)` : 문자열에서 전체를 교체헤준다. (특수문자 가능)
+    - `str.replaceAll(기존 문자열, 바꿀 문자열)` : 문자열에서 전체를 교체해준다. (특수문자 불가능)
+    - `str = str.replaceFirst(기존 문자열, 바꿀 문자열)` : 문자열에서 처음 문자열만 교체해준다.
+  - `문자열 자르기`
+    - `str.substring(시작 idx,(종료 idx))` : 종료 idx를 입력하지 않으면 문자열 끝까지 반환
+    - `char[] arr = str.toCharArray()` : 문자를 한글자씩 찢어 char배열로 반환한다.
+    - `String[] arr = str.split(parameter)` : 문자열을 parameter로 찢어 String 배열로 반환한다.
 
 [위로 가기](#목차)
 
+## 컬렉션프레임워크
+  - `List 컬렉션`
+    - 객체를 일렬로 늘어놓은 구조.
+    - 객체를 인덱스로 관리하기 때문에, 객체를 저장하면 자동 인덱스가 부여되고, 인덱스로 객체를 검색, 삭제한다.
 
-### ArrayList
+### [ArrayList](https://coding-factory.tistory.com/551)
 > `ArrayList란?` List 인터페이스를 상속받은 클래스로 크기가 가변하는 선형리스트이다.<br>
 > `ArrayList`는 선언 전 `import java.util.ArrayList;`를 선언한다
 
-  - `ArrayList<자료형> num = new ArrayList<>();`
+  - `ArrayList<자료형> al = new ArrayList<>();`
+  - `al.add(value)` : al에 값 추가
+  - `al.remove(idx)` : idx의 값 삭제
+  - `al.clear()` : 모든 값 삭제
+  - `al.size()` : al의 크기 구하기
+  - `al.contains(value)` : al에 value가 존재하면 true, 아니면 false
+  - `al.indexOf(value)` : al에 value가 존재하면 idx, 아니면 -1
 
+```java
+// ArrayList 값 출력
+al.get(idx) : idx번째 값 출력
+
+
+for(Integer i : al) { // for문을 통한 전체 출력
+  System.out.println(i);
+}
+
+
+Iterator iter =al.iterator(); //Iterator 선언
+while(iter.hasNext()){//다음값이 있는지 체크
+    System.out.println(iter.next()); //값 출력
+}
+```
 
 
 
